@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
-
 void main() async {
   const bool isRelease = bool.fromEnvironment('dart.vm.product');
   if (isRelease) {
