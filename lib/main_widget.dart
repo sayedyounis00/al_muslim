@@ -1,4 +1,5 @@
 import 'package:al_muslim/core/themes/theme_data.dart';
+import 'package:al_muslim/features/favorites/presentation/view%20model/cubit/fav_cubit.dart';
 import 'package:al_muslim/features/home/presentation/view%20model/azan_services.dart';
 import 'package:al_muslim/features/home/presentation/views/home_view.dart';
 import 'package:al_muslim/features/landing/new_landing_view.dart';
@@ -46,7 +47,6 @@ class _MainWidgetState extends State<MainWidget> {
   Widget build(BuildContext context) {
     return BlocBuilder<SettingCubit, SettingState>(
       builder: (context, state) {
-        BlocProvider.of<SettingCubit>(context).initialDataFromLDB();
         return MediaQuery(
           data: MediaQuery.of(context).copyWith(
             textScaler: const TextScaler.linear(1.0),
@@ -54,19 +54,22 @@ class _MainWidgetState extends State<MainWidget> {
           child: ScreenUtilInit(
             designSize: const Size(375, 812),
             minTextAdapt: true,
-            child: MaterialApp(
-              debugShowCheckedModeBanner: false,
-              title: 'المسلم',
-              themeMode: BlocProvider.of<SettingCubit>(context).myTheme,
-              darkTheme:
-                  CustomThemeData(BlocProvider.of<SettingCubit>(context).myFont)
-                      .darkData(context),
-              theme:
-                  CustomThemeData(BlocProvider.of<SettingCubit>(context).myFont)
-                      .lightData(context),
-              home: hasSeenLandingPage
-                  ? const HomeView()
-                  : const NewLandingView(),
+            child: BlocProvider(
+              create: (context) => FavCubit(),
+              child: MaterialApp(
+                debugShowCheckedModeBanner: false,
+                title: 'المسلم',
+                themeMode: BlocProvider.of<SettingCubit>(context).myTheme,
+                darkTheme: CustomThemeData(
+                        BlocProvider.of<SettingCubit>(context).myFont)
+                    .darkData(context),
+                theme: CustomThemeData(
+                        BlocProvider.of<SettingCubit>(context).myFont)
+                    .lightData(context),
+                home: hasSeenLandingPage
+                    ? const HomeView()
+                    : const NewLandingView(),
+              ),
             ),
           ),
         );

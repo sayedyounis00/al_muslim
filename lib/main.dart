@@ -1,10 +1,8 @@
-import 'package:al_muslim/features/favorites/presentation/view%20model/cubit/fav_cubit.dart';
 import 'package:al_muslim/features/settings/presentation/view%20model/cubit/setting_cubit.dart';
 import 'package:al_muslim/main_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:hive_flutter/adapters.dart';
 
 void main() async {
@@ -19,15 +17,8 @@ class AlMuslim extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => SettingCubit(),
-        ),
-        BlocProvider(
-          create: (context) => FavCubit(),
-        ),
-      ],
+    return BlocProvider(
+      create: (context) => SettingCubit()..initialDataFromLDB(),
       child: const MainWidget(),
     );
   }

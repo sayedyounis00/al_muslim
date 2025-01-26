@@ -5,8 +5,6 @@ import 'package:al_muslim/features/home/presentation/views/widgets/features%20ca
 import 'package:al_muslim/features/home/presentation/views/widgets/features%20cards/routine_track_card.dart';
 import 'package:flutter/material.dart';
 
-// import '../../../../settings/presentation/view/widget/rate_app.dart';
-
 class BodyContent extends StatelessWidget {
   const BodyContent({
     super.key,
