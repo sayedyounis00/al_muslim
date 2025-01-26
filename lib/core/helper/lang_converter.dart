@@ -1,5 +1,5 @@
 class LangConverter {
-    String convertToArabic(int number) {
+  String convertToArabic(int number) {
     Map<int, String> arabicDigits = {
       0: '٠',
       1: '١',

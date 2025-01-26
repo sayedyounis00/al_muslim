@@ -5,7 +5,7 @@ import 'package:al_muslim/features/home/presentation/views/widgets/features%20ca
 import 'package:al_muslim/features/home/presentation/views/widgets/features%20cards/routine_track_card.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../settings/presentation/view/widget/rate_app.dart';
+// import '../../../../settings/presentation/view/widget/rate_app.dart';
 
 class BodyContent extends StatelessWidget {
   const BodyContent({
@@ -23,8 +23,8 @@ class BodyContent extends StatelessWidget {
         RoutineTrackCard(),
         SpaceV(3),
         RandomCard(),
-        SpaceV(3),
-        RateApp(),
+        // SpaceV(3),
+        // RateApp(),
         SpaceV(20),
       ],
     );
