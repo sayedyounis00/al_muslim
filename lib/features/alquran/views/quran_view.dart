@@ -3,7 +3,6 @@ import 'package:al_muslim/core/widgets/custom_title_card.dart';
 import 'package:al_muslim/features/alquran/views/all_swar.dart';
 import 'package:al_muslim/features/alquran/views/listen%20to%20quran/listen_quran_view.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 import 'package:page_transition/page_transition.dart';
 
 class QuranView extends StatelessWidget {
@@ -47,7 +46,7 @@ class QuranView extends StatelessWidget {
           ),
           CustomTitleCard(
             title: 'تفسير القران الكريم',
-            prefixIcon: FontAwesomeIcons.book,
+            prefixIcon: Icons.menu_book,
             onTap: () {
               Navigator.push(
                 context,

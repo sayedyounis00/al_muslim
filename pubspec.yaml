@@ -18,7 +18,6 @@ dependencies:
   flutter_qiblah: ^3.0.3
   flutter_reaction_button: ^3.0.0+3
   flutter_screenutil: ^5.9.3
-  font_awesome_icon_class: ^0.0.6
   geocoding: ^3.0.0
   geolocator: ^13.0.1
   liquid_progress_indicator_v2: ^0.5.0
@@ -28,11 +27,8 @@ dependencies:
   intl: ^0.19.0
   just_audio: ^0.9.39
   linear_progress_bar: ^1.1.2
-  # image_gallery_saver: ^2.0.3
   page_transition: ^2.0.9
   permission_handler: ^11.3.1
-  # easy_container: ^1.0.4+1
-  # pie_menu: ^3.2.6
   quran: ^1.3.0
   screenshot: ^3.0.0
   scrollable_positioned_list: ^0.3.5
@@ -40,9 +36,13 @@ dependencies:
   shared_preferences: ^2.3.2
   vibration: ^2.0.0
   youtube_player_flutter: ^9.1.0
+  hive:
+  hive_flutter:
 
 dev_dependencies:
   flutter_launcher_icons: ^0.14.1
+  hive_generator:
+  build_runner:
   flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
@@ -54,14 +54,9 @@ flutter:
     - assets/images/
     - assets/logo/
     - assets/icons/
+    - assets/jsons/
     - lib/features/asma allah/data/asma_allah.json
   fonts:
     - family: IBMPlex
       fonts:
         - asset: assets/fonts/IBMPlexSansArabic-Regular.ttf
-    - family: notoCofi
-      fonts:
-        - asset: assets/fonts/NotoKufiArabic-VariableFont_wght.ttf
-    - family: Fustat
-      fonts:
-        - asset: assets/fonts/Fustat-Regular.ttf

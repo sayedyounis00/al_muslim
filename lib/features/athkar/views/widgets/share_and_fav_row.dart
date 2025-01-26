@@ -1,12 +1,12 @@
 
 import 'package:al_muslim/core/widgets/isnside_noti.dart';
-import 'package:al_muslim/features/athkar/data/azkar_all_model.dart';
+import 'package:al_muslim/features/athkar/data/models/zkr_item.dart';
 import 'package:al_muslim/features/favorites/presentation/view%20model/cubit/fav_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ShareAndFavRow extends StatefulWidget {
-  final AllAzkarModel azkar;
+  final ZkrItem azkar;
   const ShareAndFavRow({super.key, required this.azkar});
 
   @override

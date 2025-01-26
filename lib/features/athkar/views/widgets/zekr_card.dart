@@ -1,10 +1,10 @@
 import 'package:al_muslim/core/widgets/space.dart';
-import 'package:al_muslim/features/athkar/data/azkar_all_model.dart';
+import 'package:al_muslim/features/athkar/data/models/zkr_item.dart';
 import 'package:al_muslim/features/athkar/views/widgets/share_and_fav_row.dart';
 import 'package:flutter/material.dart';
 
 class ZekrCard extends StatelessWidget {
-  final AllAzkarModel azkar;
+  final ZkrItem azkar;
   const ZekrCard({super.key, required this.azkar});
 
   @override

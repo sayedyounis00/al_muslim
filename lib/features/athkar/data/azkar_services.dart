@@ -1,51 +1,19 @@
 import 'dart:convert';
-import 'package:al_muslim/features/athkar/data/azkar_all_model.dart';
-import 'package:al_muslim/features/athkar/data/azkar_cateogry_model.dart';
-import 'package:dio/dio.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:al_muslim/features/athkar/data/models/azkar_model.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 class AzkarServices {
-  Dio dio = Dio();
+  Future<List<AzkarModel>> getAzkarData() async {
+    String azkarString =
+        await rootBundle.loadString('assets/jsons/adhkar.json');
 
-  Future<void> getAllCategory() async {
-    Response response = await dio.get(
-        'https://raw.githubusercontent.com/rn0x/Adhkar-json/main/adhkar.json');
-    SharedPreferences pref = await SharedPreferences.getInstance();
-    pref.setString('category', response.data);
-  }
-
-  Future<List<AzkarCategoryModel>> getCategoryFromDB() async {
-    SharedPreferences pref = await SharedPreferences.getInstance();
-    String data = pref.getString('category')!;
-    List<dynamic> dataList = jsonDecode(data);
-
-    List<AzkarCategoryModel> categries = [];
-    for (Map<String, dynamic> item in dataList) {
-      AzkarCategoryModel category = AzkarCategoryModel.fromJson(item);
-      categries.add(category);
-    }
-    return categries;
-  }
-
-  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Future<void>  getAllAzkarInfo(startIndex) async {
-    Response response = await dio.get(
-        'https://raw.githubusercontent.com/rn0x/Adhkar-json/main/adhkar.json');
-    SharedPreferences pref = await SharedPreferences.getInstance();
-    pref.setString('allAzkarInfo', response.data);
-  }
-
-  Future<List<AllAzkarModel>> getAllInfoFromDB(startIndex) async {
-    SharedPreferences pref = await SharedPreferences.getInstance();
-    String data = pref.getString('allAzkarInfo')!;
-    List<dynamic> dataList = jsonDecode(data);
-
-    List<AllAzkarModel> info = [];
-    for (Map<String, dynamic> item in dataList[startIndex]['array']) {
-      AllAzkarModel da = AllAzkarModel.fromJson(item);
-      info.add(da);
+    var azkarJsonData = json.decode(azkarString);
+    List<AzkarModel> azkarList = [];
+    for (Map<String, dynamic> item in azkarJsonData) {
+      AzkarModel zkr = AzkarModel.fromJson(item);
+      azkarList.add(zkr);
     }
 
-    return info;
+    return azkarList;
   }
 }

@@ -5,13 +5,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class FehresService {
   Dio dio = Dio();
-Future<void>  getAllSwar() async {
+  Future<void> getAllSwar() async {
     Response response = await dio.get('https://mp3quran.net/api/v3/suwar');
     //setToDataBase
     SharedPreferences pref = await SharedPreferences.getInstance();
     pref.setString('fehres', jsonEncode(response.data));
   }
-  
+
   Future<List<SwarModel>> getFromDataBase() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
     Map<String, dynamic> response = jsonDecode(pref.getString('fehres') ?? '');
