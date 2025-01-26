@@ -34,7 +34,7 @@ class _MainWidgetState extends State<MainWidget> {
     setState(() {});
   }
 
-  updatePrayDate() async {
+  Future<void> updatePrayDate() async {
     bool isConnected = await InternetConnectionChecker().hasConnection;
     if (isConnected && hasSeenLandingPage) {
       SalahServices().setDayData();
@@ -48,8 +48,9 @@ class _MainWidgetState extends State<MainWidget> {
       builder: (context, state) {
         BlocProvider.of<SettingCubit>(context).initialDataFromLDB();
         return MediaQuery(
-          data: MediaQuery.of(context)
-              .copyWith(textScaler: const TextScaler.linear(1.0)),
+          data: MediaQuery.of(context).copyWith(
+            textScaler: const TextScaler.linear(1.0),
+          ),
           child: ScreenUtilInit(
             designSize: const Size(375, 812),
             minTextAdapt: true,

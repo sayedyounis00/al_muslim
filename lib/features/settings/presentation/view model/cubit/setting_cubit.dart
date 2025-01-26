@@ -23,7 +23,6 @@ class SettingCubit extends Cubit<SettingState> {
     initialDataFromLDB();
   }
 
-
 // Get data
   void initialDataFromLDB() async {
     SharedPreferences asyncPref = await SharedPreferences.getInstance();
