@@ -17,35 +17,22 @@ class SalahItem extends StatelessWidget {
     return Card(
       child: Container(
         padding: const EdgeInsets.all(8),
-        child: Stack(
-          alignment: Alignment.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Positioned(
-                top: 0,
-                left: 0,
-                child: Icon(
-                  Icons.notifications_none_outlined,
-                  color: Colors.orange,
-                  size: 20,
-                )),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: AppColors.kBgColDark),
-                ),
-                Text(
-                  salahTime,
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 23,
-                      color: AppColors.kBgColDark),
-                ),
-              ],
+            Text(
+              title,
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: AppColors.kBgColDark),
+            ),
+            Text(
+              salahTime,
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 23,
+                  color: AppColors.kBgColDark),
             ),
           ],
         ),

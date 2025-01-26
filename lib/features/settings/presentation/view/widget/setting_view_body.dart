@@ -57,7 +57,7 @@ class SettingViewBody extends StatelessWidget {
                     .headlineMedium!
                     .copyWith(fontSize: 20)),
             TextSpan(
-                text: 'يوسف',
+                text: 'يوسف دويدار',
                 style: Theme.of(context)
                     .textTheme
                     .headlineMedium!
@@ -68,7 +68,7 @@ class SettingViewBody extends StatelessWidget {
                 style: TextStyle(color: Colors.orange, fontSize: 25)),
             const TextSpan(text: '   '),
             TextSpan(
-                text: 'سيد',
+                text: 'سيد سيف',
                 style: Theme.of(context)
                     .textTheme
                     .headlineMedium!

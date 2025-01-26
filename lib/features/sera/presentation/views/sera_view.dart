@@ -147,7 +147,7 @@ class SeraView extends StatelessWidget {
         children: [
           const CustomAppBar(
             header: 'السيرة النبوية',
-            desc: 'مجموعة فيديوهات احمد عامر لشرح ودراسة السيرة النبوية',
+            desc: 'مجموعة فيديوهات د/احمد عامر لشرح ودراسة السيرة النبوية',
           ),
           Expanded(
             child: ListView.builder(

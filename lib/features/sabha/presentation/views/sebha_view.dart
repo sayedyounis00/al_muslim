@@ -42,14 +42,15 @@ class _SebhaViewState extends State<SebhaView> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CustomAppBar(
-                  downloadButt: () {
-                    count = 0;
-                    setState(() {});
-                  },
-                  downloadIcon: Icons.repeat,
-                  hasDownload: true,
-                  header: 'السبحة',
-                  desc: ''),
+                downloadButt: () {
+                  count = 0;
+                  setState(() {});
+                },
+                downloadIcon: Icons.repeat,
+                hasDownload: true,
+                header: 'السبحة',
+                desc: '',
+              ),
               Text(
                 textAlign: TextAlign.center,
                 widget.zkr,
@@ -59,7 +60,7 @@ class _SebhaViewState extends State<SebhaView> {
                     .copyWith(
                         color:
                             Theme.of(context).textTheme.headlineSmall!.color!)
-                    .copyWith(height: 2),
+                    .copyWith(height: 2,fontSize: 30),
               ),
               Padding(
                 padding: const EdgeInsets.all(100.0),
@@ -71,7 +72,7 @@ class _SebhaViewState extends State<SebhaView> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
                     PageTransition(
                         type: PageTransitionType.fade,

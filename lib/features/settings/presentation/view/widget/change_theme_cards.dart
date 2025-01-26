@@ -51,7 +51,7 @@ class _ChangeThemeCardState extends State<ChangeThemeCard> {
             child: Row(
               children: [
                 Radio(
-                  activeColor: Colors.purple,
+                  activeColor: Colors.orange,
                   value: options[0],
                   groupValue: curOption,
                   onChanged: (value) {
@@ -91,7 +91,7 @@ class _ChangeThemeCardState extends State<ChangeThemeCard> {
             child: Row(
               children: [
                 Radio(
-                    activeColor: Colors.purple,
+                    activeColor: Colors.orange,
                     value: options[1],
                     groupValue: curOption,
                     onChanged: (value) {
@@ -130,7 +130,7 @@ class _ChangeThemeCardState extends State<ChangeThemeCard> {
             child: Row(
               children: [
                 Radio(
-                    activeColor: Colors.purple,
+                    activeColor: Colors.orange,
                     value: options[2],
                     groupValue: curOption,
                     onChanged: (value) {

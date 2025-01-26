@@ -94,7 +94,7 @@ class _ReadQuranViewState extends State<ReadQuranView> {
                       HeaderWidget(
                         pageIndex: surahIndex,
                       ),
-                      // بسم الله معدا سورة التوبه والفاتحة
+                      // بسم الله ماعدا سورة التوبه والفاتحة
                       surahIndex == 0 || surahIndex == 8
                           ? const SizedBox()
                           : Basmalah(screenSize: screenSize),

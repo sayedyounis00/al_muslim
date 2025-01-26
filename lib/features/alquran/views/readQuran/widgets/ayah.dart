@@ -62,23 +62,7 @@ class _AyahState extends State<Ayah> {
         if (val?.value == 'play') {
           await playAyah(context);
         } else if (val?.value == 'bookMark') {
-          SharedPreferences pref = await SharedPreferences.getInstance();
-          if (bookMark) {
-            pref.remove('last_aya_num');
-            pref.remove('last_sura_num');
-            bookMark = false;
-          } else {
-            pref.setInt('last_aya_num', widget.verseIndex);
-            pref.setInt('last_sura_num', widget.surahIndex);
-            bookMark = true;
-            InsideNotification.insideNotificationCard(
-                contentType: ContentType.help,
-                context: context,
-                title: 'تم حفظ اخر موضع لك',
-                content: "",
-                time: 1);
-          }
-          setState(() {});
+          await mark(context);
         } else if (val?.value == 'tafser') {
           final bool isCon = await InternetConnectionChecker().hasConnection;
           if (isCon) {
@@ -170,7 +154,7 @@ class _AyahState extends State<Ayah> {
       ],
       child: GestureDetector(
         onDoubleTap: () async {
-          await playAyah(context);
+          await mark(context);
         },
         child: Container(
           decoration: BoxDecoration(
@@ -217,6 +201,25 @@ class _AyahState extends State<Ayah> {
         ),
       ),
     );
+  }
+
+  Future<void> mark(BuildContext context) async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    if (bookMark) {
+      pref.remove('last_aya_num');
+      pref.remove('last_sura_num');
+      bookMark = false;
+    } else {
+      pref.setInt('last_aya_num', widget.verseIndex);
+      pref.setInt('last_sura_num', widget.surahIndex);
+      bookMark = true;
+      InsideNotification.insideNotificationCard(
+          contentType: ContentType.help,
+          context: context,
+          title: 'تم حفظ اخر موضع لك',
+          content: "سورة : ${quran.getSurahNameArabic(widget.surahIndex + 1)}       اية رقم: ${widget.verseIndex + 1}",
+          time: 1);
+    }
   }
 
   Future<void> playAyah(BuildContext context) async {

@@ -63,7 +63,7 @@ class _SoundSwitchState extends State<SoundSwitch> {
   @override
   Widget build(BuildContext context) {
     return Switch(
-      activeColor: Colors.purple,
+      activeColor: Colors.orange,
       value: isDone,
       onChanged: (needSound) async {
         SharedPreferences asyncPref = await SharedPreferences.getInstance();
