@@ -100,7 +100,7 @@ class _AllSwarViewBodyState extends State<AllSwarViewBody> {
         // Suar list view
         Expanded(
           child: FutureBuilder(
-              future: FehresService().getFromDataBase(),
+              future: FehresService().getSwarList(),
               builder: (context, snapShot) {
                 if (snapShot.hasData) {
                   allSwar = snapShot.data!;

@@ -1,6 +1,7 @@
+import 'dart:developer';
+
 import 'package:al_muslim/core/helper/location.dart';
 import 'package:al_muslim/core/widgets/space.dart';
-import 'package:al_muslim/features/alquran/data/fehres_service.dart';
 import 'package:al_muslim/features/home/presentation/view%20model/azan_services.dart';
 import 'package:al_muslim/features/home/presentation/views/home_view.dart';
 import 'package:al_muslim/features/landing/widgets/landing_list_tile.dart';
@@ -63,7 +64,6 @@ class _NewLandingViewState extends State<NewLandingView> {
                 try {
                   await PrayTimeServices().getPrayTime();
                   await SalahServices().setDayData();
-                  await FehresService().getAllSwar();
 
                   SharedPreferences prefs =
                       await SharedPreferences.getInstance();
@@ -75,6 +75,7 @@ class _NewLandingViewState extends State<NewLandingView> {
                     ),
                   );
                 } catch (e) {
+                  log(e.toString());
                   downloading = false;
                 }
               }

@@ -35,7 +35,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.al_muslim"
-        minSdkVersion 28     // Support from Android 9 (Pie)
+        minSdkVersion flutter.minSdkVersion
         targetSdkVersion 34   // Target the latest version (currently Android 14)
         versionCode 2
         versionName "1.1.0"
