@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:al_muslim/core/widgets/custom_app_bar.dart';
 import 'package:al_muslim/features/alquran/data/model/reacters_model.dart';
 import 'package:al_muslim/features/alquran/data/reacters_services.dart';
@@ -29,7 +31,9 @@ class _ListenQuranViewBodyState extends State<ListenQuranViewBody> {
     return Column(
       children: [
         const CustomAppBar(
-            header: 'القراء', desc: "الاستماع الي مكتبه كبيره من القراء "),
+          header: 'القراء',
+          desc: "الاستماع الي مكتبه كبيره من القراء ",
+        ),
 
         // Sreach field
         Padding(
@@ -105,9 +109,10 @@ class _ListenQuranViewBodyState extends State<ListenQuranViewBody> {
 
   //?search function
   void addSearcherChartoFiltertheList(String searcherChar) {
-    searchedList = allList
-        .where((radio) => radio.name.toLowerCase().contains(searcherChar))
-        .toList();
+    log(searchedList.toString());
+    searchedList =
+        allList.where((radio) => radio.name.startsWith(searcherChar)).toList();
+
     setState(() {});
   }
 }
