@@ -141,7 +141,7 @@ class _AllSwarViewBodyState extends State<AllSwarViewBody> {
                                     Navigator.push(
                                       context,
                                       PageTransition(
-                                        type: PageTransitionType.fade,
+                                        type: PageTransitionType.rightToLeft,
                                         child: ReadQuranView(
                                             requiredPage: index + 1),
                                       ),

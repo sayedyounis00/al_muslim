@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:dio/dio.dart';
 
 class ApiServices {
@@ -13,9 +14,13 @@ class ApiServices {
   }
 
   getData({required String endPoint}) async {
-    Response response = await dio.get(
-      endPoint,
-    );
-    return response.data;
+    try {
+      Response response = await dio.get(
+        endPoint,
+      );
+      return response.data;
+    } catch (e) {
+      log(e.toString());
+    }
   }
 }

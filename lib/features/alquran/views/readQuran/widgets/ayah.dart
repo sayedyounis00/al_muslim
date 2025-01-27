@@ -33,6 +33,7 @@ class _AyahState extends State<Ayah> {
       if (pref.getInt('last_sura_num') == widget.surahIndex &&
           pref.getInt('last_aya_num') == widget.verseIndex) {
         bookMark = true;
+        setState(() {});
       }
     }
   }
@@ -213,13 +214,17 @@ class _AyahState extends State<Ayah> {
       pref.setInt('last_aya_num', widget.verseIndex);
       pref.setInt('last_sura_num', widget.surahIndex);
       bookMark = true;
+
       InsideNotification.insideNotificationCard(
-          contentType: ContentType.help,
-          context: context,
-          title: 'تم حفظ اخر موضع لك',
-          content: "سورة : ${quran.getSurahNameArabic(widget.surahIndex + 1)}       اية رقم: ${widget.verseIndex + 1}",
-          time: 1);
+        contentType: ContentType.help,
+        context: context,
+        title: 'تم حفظ اخر موضع لك',
+        content:
+            "سورة : ${quran.getSurahNameArabic(widget.surahIndex + 1)}       اية رقم: ${widget.verseIndex + 1}",
+        time: 1,
+      );
     }
+    setState(() {});
   }
 
   Future<void> playAyah(BuildContext context) async {

@@ -69,7 +69,7 @@ class FinalLoc {
     if (pos != null) {
       List<Placemark> curLoc =
           await GetLocationData().getLocation(position: pos);
-      //retur basyon
+      //return basyon
       return curLoc.first.subAdministrativeArea!;
     }
     return 'فشل تحديد موقعك';

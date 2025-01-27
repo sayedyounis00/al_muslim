@@ -41,7 +41,7 @@ class CustomAppBar extends StatelessWidget {
                 ? Positioned(
                     top: 15,
                     left: 30,
-                    child: GestureDetector(
+                    child: InkWell(
                       onTap: downloadButt,
                       child: Icon(
                         size: 41,

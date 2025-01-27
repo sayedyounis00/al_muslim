@@ -4,6 +4,8 @@ import 'package:al_muslim/features/home/data/model/azan_model.dart';
 import 'package:intl/intl.dart';
 
 class PrayTimeServices {
+  
+  
   Future<void> getPrayTime() async {
     DateTime now = DateTime.now();
     String formattedDate = DateFormat('dd-MM-yyyy').format(now);
