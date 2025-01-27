@@ -1,3 +1,4 @@
+import 'package:al_muslim/core/utils/constants.dart';
 import 'package:al_muslim/features/settings/presentation/view%20model/cubit/setting_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,7 +7,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SettingCubit extends Cubit<SettingState> {
   SettingCubit() : super(SettingInitial());
   bool isRefreshed = true;
-  ThemeMode myTheme = ThemeMode.light;
+  ThemeMode myTheme = ThemeMode.system;
+  Color myColor = AppColors.kBgColLight;
+  Color conColor = AppColors.kPrimaryColLight;
   double myFont = 20.0;
 
   void setTheme({required ThemeMode theme}) async {
@@ -23,18 +26,40 @@ class SettingCubit extends Cubit<SettingState> {
     initialDataFromLDB();
   }
 
+  void setbgColor({required int color}) async {
+    SharedPreferences asyncPref = await SharedPreferences.getInstance();
+    asyncPref.setInt('bgcolor', color);
+    myColor = Color(color);
+    initialDataFromLDB();
+  }
+
+  void setContainerColor({required int color}) async {
+    SharedPreferences asyncPref = await SharedPreferences.getInstance();
+    asyncPref.setInt('conColor', color);
+    conColor = Color(color);
+    initialDataFromLDB();
+  }
+
 // Get data
   void initialDataFromLDB() async {
-    SharedPreferences asyncPref = await SharedPreferences.getInstance();
-    if (asyncPref.getDouble('font') != null) {
-      myFont = asyncPref.getDouble('font')!;
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    if (pref.getDouble('font') != null) {
+      myFont = pref.getDouble('font')!;
     }
-    if (asyncPref.getString('theme') == 'ThemeMode.dark') {
+    if (pref.getString('theme') == 'ThemeMode.dark') {
       myTheme = ThemeMode.dark;
-    } else if (asyncPref.getString('theme') == 'ThemeMode.light') {
+    } else if (pref.getString('theme') == 'ThemeMode.light') {
       myTheme = ThemeMode.light;
-    } else if (asyncPref.getString('theme') == 'ThemeMode.system') {
+    } else if (pref.getString('theme') == 'ThemeMode.system') {
       myTheme = ThemeMode.system;
+    }
+
+    if (pref.getInt('bgcolor') != null) {
+      myColor = Color(pref.getInt('bgcolor')!);
+    }
+
+    if (pref.getInt('conColor') != null) {
+      conColor = Color(pref.getInt('conColor')!);
     }
     emit(DoneLoadData());
   }

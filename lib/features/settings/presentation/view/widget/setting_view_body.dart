@@ -1,5 +1,6 @@
 import 'package:al_muslim/core/widgets/custom_app_bar.dart';
 import 'package:al_muslim/core/widgets/space.dart';
+import 'package:al_muslim/features/settings/presentation/view/widget/colors/change_colors_card.dart';
 import 'package:al_muslim/features/settings/presentation/view/widget/change_font_card.dart';
 import 'package:al_muslim/features/settings/presentation/view/widget/change_theme_cards.dart';
 import 'package:al_muslim/features/settings/presentation/view/widget/sound_card.dart';
@@ -26,6 +27,8 @@ class SettingViewBody extends StatelessWidget {
         const SpaceV(5),
         const Divider(height: 0),
         const ChangeThemeCard(),
+        const SpaceV(12),
+        const ChangeColorsCard(),
         const SpaceV(12),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -80,3 +83,4 @@ class SettingViewBody extends StatelessWidget {
     );
   }
 }
+

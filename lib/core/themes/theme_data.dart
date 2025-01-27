@@ -5,9 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 class CustomThemeData {
   final double myFont;
   CustomThemeData(this.myFont);
-  ThemeData darkData(context) {
+
+  ThemeData darkData(context, Color mybgColor, Color cardColor) {
     return ThemeData(
-      scaffoldBackgroundColor: AppColors.kBgColDark,
+      scaffoldBackgroundColor: mybgColor,
       // ###################
       // ###################
       textTheme: GoogleFonts.amiriTextTheme(
@@ -15,7 +16,7 @@ class CustomThemeData {
               headlineSmall: const TextStyle(color: Colors.white),
               bodyLarge: const TextStyle(color: Colors.white),
               headlineMedium: const TextStyle(color: Colors.white),
-              titleLarge: const TextStyle(color: Colors.black,fontSize: 20),
+              titleLarge: const TextStyle(color: Colors.black, fontSize: 20),
               titleMedium: const TextStyle(color: Colors.white),
               // $$$$$$$$$$$$$$$$$$$$$$$$$$$
               labelLarge: const TextStyle(color: Colors.white)
@@ -24,10 +25,7 @@ class CustomThemeData {
       ),
 
       // ###################
-      cardTheme: CardTheme(
-        elevation: 2.1,
-        color: AppColors.kPrimaryColDark,
-      ),
+      cardTheme: CardTheme(elevation: 2.1, color: cardColor),
 
       // ###################
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -54,7 +52,7 @@ class CustomThemeData {
   }
 
 // =========================================================================
-  ThemeData lightData(context) {
+  ThemeData lightData(context, Color cardColor) {
     return ThemeData(
       scaffoldBackgroundColor: AppColors.kBgColLight,
       // ###################
@@ -81,10 +79,7 @@ class CustomThemeData {
       ),
 
       // ###################
-      cardTheme: CardTheme(
-        elevation: 2.1,
-        color: AppColors.kPrimaryColLight,
-      ),
+      cardTheme: CardTheme(elevation: 2.1, color: cardColor),
 
       // ###################
       iconButtonTheme: const IconButtonThemeData(

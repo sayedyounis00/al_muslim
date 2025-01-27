@@ -62,10 +62,17 @@ class _MainWidgetState extends State<MainWidget> {
                 themeMode: BlocProvider.of<SettingCubit>(context).myTheme,
                 darkTheme: CustomThemeData(
                         BlocProvider.of<SettingCubit>(context).myFont)
-                    .darkData(context),
+                    .darkData(
+                  context,
+                  context.read<SettingCubit>().myColor,
+                  context.read<SettingCubit>().conColor,
+                ),
                 theme: CustomThemeData(
                         BlocProvider.of<SettingCubit>(context).myFont)
-                    .lightData(context),
+                    .lightData(
+                  context,
+                  context.read<SettingCubit>().conColor,
+                ),
                 home: hasSeenLandingPage
                     ? const HomeView()
                     : const NewLandingView(),

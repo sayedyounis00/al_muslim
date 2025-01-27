@@ -4,7 +4,6 @@
 // import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 // import 'package:flutter/material.dart';
 // import 'package:internet_connection_checker/internet_connection_checker.dart';
-// import 'package:sentry_flutter/sentry_flutter.dart';
 
 // class RateView extends StatefulWidget {
 //   const RateView({
