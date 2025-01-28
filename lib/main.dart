@@ -4,14 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await SharedPreferences.getInstance().then((v) => v.clear());
   await Hive.initFlutter();
-  Future.wait([
-    Hive.openBox('hadith'),
-    Hive.openBox('salah'),
-  ]);
+  await Hive.openBox('hadith');
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   runApp(const AlMuslim());
 }

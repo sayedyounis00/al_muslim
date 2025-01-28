@@ -1,26 +1,24 @@
-import 'package:al_muslim/core/helper/location.dart';
-import 'package:al_muslim/core/storage/storage_service.dart';
 import 'package:al_muslim/features/home/data/model/azan_model.dart';
-import 'package:intl/intl.dart';
+import 'package:al_muslim/features/home/data/model/timing.dart';
+import 'package:al_muslim/features/salah/data/model/day_data.dart';
+import 'package:al_muslim/features/salah/presentation/view%20model/salah_services.dart';
+import 'package:flutter/material.dart';
 
 class PrayTimeServices {
-  
-  
-  Future<void> getPrayTime() async {
-    DateTime now = DateTime.now();
-    String formattedDate = DateFormat('dd-MM-yyyy').format(now);
-    String loc = await FinalLoc.getLoc();
-
-    StorageService.setToLDB(
-      keyInLDB: 'pray_times',
-      apiLink:
-          'https://api.aladhan.com/v1/timingsByCity/$formattedDate?city=$loc&country=',
-    );
-  }
-
   Future<AzanModel> getDataFromDB() async {
-    dynamic prayMap = await StorageService.getFromLDB(key: 'pray_times');
-    AzanModel azan = AzanModel.fromJson(prayMap);
+    DayData dayData = await SalahServices().getDayDataFormLDB();
+    AzanModel azan = AzanModel(
+      timings: Timings(
+        fajr: dayData.salah.fajr,
+        dhuhr: dayData.salah.dhuhr,
+        asr: dayData.salah.asr,
+        maghrib: dayData.salah.maghrib,
+        isha: dayData.salah.isha,
+      ),
+      prayTime: '',
+      title: '',
+      icon: Icons.reddit,
+    );
     return azan;
   }
 }

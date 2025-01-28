@@ -38,7 +38,7 @@ class AzanList extends StatelessWidget {
     } else if (snapShot.hasData) {
       return returnedSalahColumn(snapShot, index, salahNowSnap);
     } else {
-      return Text(snapShot.error.toString());
+      return const Text('اعد تحميل الصفحة الحالية');
     }
   }
 

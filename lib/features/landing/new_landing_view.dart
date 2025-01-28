@@ -62,7 +62,7 @@ class _NewLandingViewState extends State<NewLandingView> {
                 downloading = true;
                 setState(() {});
                 try {
-                  await PrayTimeServices().getPrayTime();
+                  
                   await SalahServices().setDayData();
 
                   SharedPreferences prefs =

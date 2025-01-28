@@ -1,6 +1,5 @@
 import 'package:al_muslim/core/themes/theme_data.dart';
 import 'package:al_muslim/features/favorites/presentation/view%20model/cubit/fav_cubit.dart';
-import 'package:al_muslim/features/home/presentation/view%20model/azan_services.dart';
 import 'package:al_muslim/features/home/presentation/views/home_view.dart';
 import 'package:al_muslim/features/landing/new_landing_view.dart';
 import 'package:al_muslim/features/salah/presentation/view%20model/salah_services.dart';
@@ -39,7 +38,6 @@ class _MainWidgetState extends State<MainWidget> {
     bool isConnected = await InternetConnectionChecker().hasConnection;
     if (isConnected && hasSeenLandingPage) {
       SalahServices().setDayData();
-      PrayTimeServices().getPrayTime();
     }
   }
 
