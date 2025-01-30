@@ -8,7 +8,7 @@ class SettingCubit extends Cubit<SettingState> {
   SettingCubit() : super(SettingInitial());
   bool isRefreshed = true;
   ThemeMode myTheme = ThemeMode.system;
-  Color myColor = AppColors.kBgColLight;
+  Color myColor = AppColors.kBgColDark;
   Color conColor = AppColors.kPrimaryColLight;
   double myFont = 20.0;
 

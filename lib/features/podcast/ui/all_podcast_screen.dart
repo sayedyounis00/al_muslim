@@ -1,10 +1,9 @@
-import 'package:al_muslim/core/utils/lists/podcast_image.dart';
+import 'package:al_muslim/core/utils/images_data.dart';
 import 'package:al_muslim/core/utils/models/podcast_data.dart';
 import 'package:al_muslim/core/widgets/custom_app_bar.dart';
+import 'package:al_muslim/features/podcast/data/podcasts_links.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import '../data/model/eh_elmoshkila_list.dart';
-import '../data/wa3i_list.dart';
 import 'podcast_episons_screen.dart';
 import 'widgets/home_main_item.dart';
 
@@ -13,10 +12,11 @@ class AllPodcastsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<List<PodcastData>> podcasts = [
-      ehElmoshkilaVideos(),
-      wa3iVideos(),
-    ];
+    Map<String, List<PodcastData>> podcasts = {
+      ImageData.podcastEhLmoshkla: ehElmoshkilaVideos(),
+      ImageData.podcastWae: wa3iVideos(),
+    };
+
     return Scaffold(
       body: Column(
         mainAxisSize: MainAxisSize.min,
@@ -29,20 +29,20 @@ class AllPodcastsScreen extends StatelessWidget {
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
               ),
-              itemCount: podcastImages().length,
+              itemCount: podcasts.length,
               itemBuilder: (BuildContext context, int index) {
                 return PodcastItem(
                   onTap: () => Navigator.push(
                     context,
                     PageTransition(
                         child: PodcastEpisonsScreen(
-                          podcastData: podcasts[index],
-                          podcastImages: podcastImages()[index].imageUrl,
+                          index: index,
+                          podcastData: podcasts.values.toList()[index],
+                          podcastImages: podcasts.keys.toList()[index],
                         ),
                         type: PageTransitionType.rightToLeft),
                   ),
-                  imageUrl: podcastImages()[index].imageUrl,
-                  color: Theme.of(context).textTheme.labelLarge!.color!,
+                  imageUrl: podcasts.keys.toList()[index],
                   height: 200,
                   width: 110,
                   radius: 20,

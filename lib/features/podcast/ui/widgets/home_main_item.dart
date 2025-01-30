@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class PodcastItem extends StatelessWidget {
-  final Color color;
   final double height;
   final double width;
   final double radius;
@@ -9,7 +8,6 @@ class PodcastItem extends StatelessWidget {
   final Function() onTap;
   const PodcastItem({
     super.key,
-    required this.color,
     required this.height,
     required this.width,
     required this.radius,
@@ -26,9 +24,11 @@ class PodcastItem extends StatelessWidget {
         height: height,
         width: width,
         decoration: BoxDecoration(
-            border: Border.all(color: color, width: 1),
-            borderRadius: BorderRadius.circular(radius),
-            image: DecorationImage(image: NetworkImage(imageUrl))),
+          border: Border.all(color: Colors.deepOrange, width: 1),
+          borderRadius: BorderRadius.circular(radius),
+          image:
+              DecorationImage(image: AssetImage(imageUrl), fit: BoxFit.fill),
+        ),
       ),
     );
   }

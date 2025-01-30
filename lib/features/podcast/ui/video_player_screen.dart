@@ -14,7 +14,7 @@ class VideoPlayerScreen extends StatefulWidget {
 }
 
 class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
-  late bool isPlaying;
+  bool isPlaying = true;
   bool isMuted = false;
   late String id;
   late YoutubePlayerController _controller;
@@ -22,27 +22,16 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   void initState() {
     setState(() {});
     id = YoutubePlayer.convertUrlToId(widget.podcastData.vidUrl)!;
-    _controller = YoutubePlayerController(
-      initialVideoId: id,
-      flags: const YoutubePlayerFlags(
-        //!change after
-        hideControls: false,
-        autoPlay: true,
-        forceHD: false,
-        controlsVisibleAtStart: true,
-        mute: false,
-      ),
-    );
-    isPlaying = _controller.value.isPlaying;
+    _controller = YoutubePlayerController(initialVideoId: id);
     setState(() {});
     super.initState();
   }
 
-  // @override
-  // void dispose() {
-  //   _controller.dispose();
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +44,8 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
           onReady: () {},
         ),
         builder: (_, player) {
-          return Column(
+          return  
+          Column(
             children: [
               CustomAppBar(
                 header: widget.podcastData.vidTitle.split('|').first,
@@ -152,6 +142,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
               const SpaceV(20),
             ],
           );
+      
         },
       ),
     );

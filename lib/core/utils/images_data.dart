@@ -14,9 +14,10 @@ class ImageData {
   static String qibla = 'assets/images/landmark.png';
   static String radioMasr = 'assets/icons/radio_masr.png';
   static String azkar = 'assets/icons/prayer.png';
+  static String allah = 'assets/icons/allah.png';
+  static String podcast = 'assets/icons/microphone.png';
 
   // =============== hadith =====================
-
   static String trmzy =
       'assets/images/92eaf993afe133991204d132651d95fa.png.webp';
   static String buhary = 'assets/images/buharyy.jpeg';
@@ -27,4 +28,13 @@ class ImageData {
   static String magaa = 'assets/images/سنن_ابن_ماجة.jpg';
   static String muslim = 'assets/images/صحيح-مسلم.jpg';
   static String ahmed = 'assets/images/مسند_احمد.webp';
+
+
+// ==================podcast=====================
+  static String podcastWae = 'assets/images/wae.jpg';
+  static String podcastEhLmoshkla = 'assets/images/moshcila.jpg';
+
+
 }
+
+

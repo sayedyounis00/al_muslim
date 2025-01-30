@@ -72,18 +72,20 @@ class FeaturesGridView extends StatelessWidget {
                     imagePath: ImageData.thbha,
                     navigateTo: const SebhaView(),
                   ),
-                  const FeatureCard(
+                  FeatureCard(
                     title: 'السيرة النبوية',
-                    navigateTo: SeraView(),
-                    // imagePath: ImageData.sera,
+                    navigateTo: const SeraView(),
+                    imagePath: ImageData.sera,
                   ),
-                  const FeatureCard(
-                    navigateTo: AsmaaAllahView(),
-                    title: 'أسماء الله\nالحسنى',
+                  FeatureCard(
+                    navigateTo: const AsmaaAllahView(),
+                    title: 'اسماء الله',
+                    imagePath: ImageData.allah,
                   ),
-                  const FeatureCard(
-                    navigateTo: AllPodcastsScreen(),
+                  FeatureCard(
+                    navigateTo: const AllPodcastsScreen(),
                     title: 'البودكاست',
+                    imagePath: ImageData.podcast,
                   ),
                 ],
               ),
