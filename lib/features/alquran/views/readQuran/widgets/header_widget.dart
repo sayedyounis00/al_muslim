@@ -27,12 +27,12 @@ class HeaderWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.7, vertical: 7),
             child: Text(
-              ' ${getSurahNameArabic(pageIndex + 1)}',
+              'سورة ${getSurahNameArabic(pageIndex + 1)}',
               style: TextStyle(
-                fontFamily: "arsura",
+                // fontFamily: "arsura",
                 fontSize: forYousef ? 18 : 22,
                 color: forYousef
-                    ? Colors.white
+                    ? Colors.black
                     : Theme.of(context).textTheme.labelLarge!.color,
               ),
             ),

@@ -21,7 +21,6 @@ class BodyContent extends StatelessWidget {
         RoutineTrackCard(),
         SpaceV(3),
         RandomCard(),
-    
         SpaceV(20),
       ],
     );

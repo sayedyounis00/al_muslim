@@ -4,7 +4,7 @@ import 'package:al_muslim/core/utils/images_data.dart';
 import 'package:al_muslim/core/widgets/space.dart';
 import 'package:al_muslim/features/alquran/views/readQuran/widgets/header_widget.dart';
 import 'package:flutter/material.dart';
-// import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:image_gallery_saver_plus/image_gallery_saver_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:screenshot/screenshot.dart';
 
@@ -27,18 +27,12 @@ class _ScreenShotViewState extends State<ScreenShotView> {
   ScreenshotController screenshotController = ScreenshotController();
 
   Future<void> saveImageToGallery() async {
-    await _requestPermission();
+    await Permission.storage.request();
     final Uint8List? image = await screenshotController.capture();
     if (image != null) {
-      // await ImageGallerySaver.saveImage(image, quality: 100);
-      Navigator.pop(context);
-    }
-  }
-
-  Future<void> _requestPermission() async {
-    if (await Permission.storage.request().isGranted) {
-    } else {
-      await Permission.storage.request();
+      await ImageGallerySaverPlus.saveImage(image,
+          quality: 100,
+          name: "almuslim_${DateTime.now().millisecondsSinceEpoch}");
     }
   }
 
@@ -61,7 +55,7 @@ class _ScreenShotViewState extends State<ScreenShotView> {
               controller: screenshotController,
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 6),
-                color: const Color.fromARGB(36, 230, 162, 137),
+                color: const Color.fromRGBO(243, 232, 192, 0.99),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -76,7 +70,7 @@ class _ScreenShotViewState extends State<ScreenShotView> {
                       style: const TextStyle(
                         fontFamily: 'Traditional Arabic',
                         fontSize: 20,
-                        color: Colors.white,
+                        color: Colors.black,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -90,7 +84,7 @@ class _ScreenShotViewState extends State<ScreenShotView> {
                       style: TextStyle(
                         fontFamily: 'Traditional Arabic',
                         fontSize: 12,
-                        color: Colors.grey,
+                        color: Color.fromARGB(199, 0, 0, 0),
                       ),
                     ),
                     const SpaceV(10),
@@ -120,11 +114,9 @@ class _ScreenShotViewState extends State<ScreenShotView> {
                 const SpaceH(5),
                 Expanded(
                   child: InkWell(
-                    onTap: () {
-                      saveImageToGallery();
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                        content: Text('تم حفظ الصوره ف المعرض ',textAlign: TextAlign.end,),
-                      ));
+                    onTap: () async {
+                      await saveImageToGallery();
+                      Navigator.pop(context);
                     },
                     child: Container(
                       color: Colors.greenAccent,

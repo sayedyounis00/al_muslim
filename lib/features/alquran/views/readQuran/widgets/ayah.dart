@@ -109,12 +109,11 @@ class _AyahState extends State<Ayah> {
                 content: "لقراءة التفسير تأكد من اتصالك بالانترنت");
           }
         } else if (val?.value == 'share') {
-          showModalBottomSheet(
+          await showModalBottomSheet(
             showDragHandle: true,
             backgroundColor: const Color.fromARGB(255, 33, 33, 33),
             context: context,
             builder: (context) {
-              //? screen shot view...
               return ScreenShotView(
                 suraIndex: widget.surahIndex,
                 suraName: quran.getSurahNameArabic(widget.surahIndex + 1),
@@ -122,6 +121,13 @@ class _AyahState extends State<Ayah> {
                     '${quran.getVerse(widget.surahIndex + 1, widget.verseIndex + 1).toString()}${quran.getVerseEndSymbol(widget.verseIndex + 1)}',
               );
             },
+          );
+          InsideNotification.insideNotificationCard(
+            contentType: ContentType.help,
+            context: context,
+            title: 'تم بنجاح',
+            content: 'تم حفظ الصوره ف المعرض ',
+            time: 2,
           );
           setState(() {});
         }

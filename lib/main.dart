@@ -18,7 +18,6 @@ void callbackDispatcher() {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // SharedPreferences.getInstance().then((v) => v.clear());
   await NotificationService.initNotification();
   Workmanager().initialize(callbackDispatcher);
   await Hive.initFlutter();

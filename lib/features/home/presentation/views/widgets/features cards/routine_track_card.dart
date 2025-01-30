@@ -9,7 +9,7 @@ class RoutineTrackCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal:20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: InkWell(
         onTap: () {
           showDialog(
@@ -36,20 +36,21 @@ class RoutineTrackCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 8),
             child: Column(
               children: [
+                const SizedBox(height: 10),
                 Text(
-                  'الروتين اليومي',
+                  'ختمات القرآن',
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 Expanded(
                   child: Padding(
                     padding:
-                        const EdgeInsets.only(right: 10, left: 10, top: 30),
+                        const EdgeInsets.only(right: 10, left: 10, top: 20),
                     child: LinearProgressBar(
                       borderRadius: BorderRadius.circular(20),
                       progressType: LinearProgressBar.progressTypeLinear,
                       progressColor: Colors.orange,
                       backgroundColor: Colors.white,
-                      minHeight: 10,
+                      minHeight: 1,
                       maxSteps: 9,
                       currentStep: 1,
                     ),

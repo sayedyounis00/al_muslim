@@ -17,7 +17,7 @@ class HidenZekrWidgetForShareOnly extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12),
-      color: const Color.fromARGB(36, 230, 162, 137),
+      color: const Color.fromRGBO(243, 232, 192, 0.99),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -29,7 +29,7 @@ class HidenZekrWidgetForShareOnly extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .labelLarge!
-                .copyWith(height: 2, color: Colors.white),
+                .copyWith(height: 2, color: Colors.black),
           ),
           const SizedBox(height: 10),
           Image.asset(
@@ -41,7 +41,7 @@ class HidenZekrWidgetForShareOnly extends StatelessWidget {
             style: TextStyle(
               fontFamily: 'Traditional Arabic',
               fontSize: 12,
-              color: Colors.grey,
+              color: Color.fromARGB(211, 0, 0, 0),
             ),
           ),
           const SpaceV(10),

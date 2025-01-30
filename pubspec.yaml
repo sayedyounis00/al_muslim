@@ -39,6 +39,7 @@ dependencies:
   hive:
   hive_flutter:
   workmanager: ^0.5.2
+  image_gallery_saver_plus: ^3.0.5
 
 dev_dependencies:
   flutter_launcher_icons: ^0.14.1
