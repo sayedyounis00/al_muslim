@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 import 'package:al_muslim/features/salah/data/model/day_data.dart';
 import 'package:al_muslim/features/salah/presentation/view%20model/salah_services.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
@@ -17,8 +18,9 @@ class NotificationService {
       },
     );
     SharedPreferences pref = await SharedPreferences.getInstance();
-    _needSound = pref.getBool('sound') ?? false;
-
+    if (pref.containsKey('sound')) {
+      _needSound = pref.getBool('sound') ?? false;
+    }
     await AwesomeNotifications().initialize(
       'resource://drawable/noti',
       [
@@ -29,7 +31,6 @@ class NotificationService {
           defaultColor: const Color(0xFF9D50DD),
           importance: NotificationImportance.Max,
           channelShowBadge: true,
-          locked: true,
           playSound: _needSound,
           soundSource: 'resource://raw/azan',
         ),
@@ -58,6 +59,7 @@ class NotificationService {
         minute: maghrib['min']);
     await _createNotificationGlobal(
         id: 4, salahName: "العشاء", hour: isha['hour'], minute: isha['min']);
+    log((await AwesomeNotifications().listScheduledNotifications()).toString());
   }
 
   static Future<void> _createNotificationGlobal({
@@ -75,7 +77,7 @@ class NotificationService {
         notificationLayout: NotificationLayout.Default,
       ),
       schedule: NotificationCalendar(
-        repeats: true,
+        repeats: true, // اتركها كما هي لتكرار الإشعارات يوميًا
         hour: hour,
         minute: minute,
         second: 0,
@@ -87,6 +89,10 @@ class NotificationService {
 
   static Future<void> removeAllNotifications() async {
     await AwesomeNotifications().cancelAll();
+  }
+
+  static Future<void> removeChannel() async {
+    await AwesomeNotifications().removeChannel('prayer_channel');
   }
 
   static Map _getMinAndHourFromDateString(String salah) {

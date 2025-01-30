@@ -4,11 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:workmanager/workmanager.dart';
+import 'package:al_muslim/core/notification/noti_service.dart';
+
+@pragma('vm:entry-point')
+void callbackDispatcher() {
+  Workmanager().executeTask((task, inputData) async {
+    await NotificationService.removeAllNotifications();
+    await NotificationService.createPrayerNotifications();
+    return Future.value(true);
+  });
+}
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await SharedPreferences.getInstance().then((v) => v.clear());
+  await NotificationService.initNotification();
+  Workmanager().initialize(callbackDispatcher);
   await Hive.initFlutter();
   await Hive.openBox('hadith');
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
