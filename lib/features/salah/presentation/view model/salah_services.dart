@@ -9,7 +9,7 @@ class SalahServices {
     String formattedDate = DateFormat('dd-MM-yyyy').format(now);
     String loc = await FinalLoc.getLoc();
 
-    StorageService.setToLDB(
+    await StorageService.setToLDB(
         keyInLDB: 'salah',
         apiLink:
             'https://api.aladhan.com/v1/timingsByCity/$formattedDate?city=$loc&country=');
@@ -17,7 +17,6 @@ class SalahServices {
 
   Future<DayData> getDayDataFormLDB() async {
     var data = await StorageService.getFromLDB(key: 'salah');
-
     DayData dayData = DayData.fromJson(data);
 
     return dayData;

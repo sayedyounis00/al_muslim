@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:workmanager/workmanager.dart';
 import 'package:al_muslim/core/notification/noti_service.dart';
 
@@ -18,6 +19,7 @@ void callbackDispatcher() {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.getInstance().then((v) => v.clear());
   await NotificationService.initNotification();
   Workmanager().initialize(callbackDispatcher);
   await Hive.initFlutter();

@@ -1,7 +1,7 @@
 import 'package:al_muslim/core/helper/time_helper.dart';
 import 'package:al_muslim/features/home/data/model/azan_model.dart';
-import 'package:al_muslim/features/home/presentation/view%20model/azan_services.dart';
 import 'package:al_muslim/features/home/presentation/views/widgets/times/salah_column.dart';
+import 'package:al_muslim/features/salah/presentation/view%20model/cubit/salah_cubit.dart';
 import 'package:flutter/material.dart';
 
 class AzanList extends StatelessWidget {
@@ -13,38 +13,23 @@ class AzanList extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: TimeHelper().getRemaindSalahinfo(),
-      builder: (context, salahNowSnap) => FutureBuilder<AzanModel>(
-        future: PrayTimeServices().getDataFromDB(),
-        builder: (context, snapShot) {
-          return Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              handleSalah(snapShot, 0, salahNowSnap)!,
-              handleSalah(snapShot, 1, salahNowSnap)!,
-              handleSalah(snapShot, 2, salahNowSnap)!,
-              handleSalah(snapShot, 3, salahNowSnap)!,
-              handleSalah(snapShot, 4, salahNowSnap)!,
-            ],
-          );
-        },
-      ),
+      builder: (context, salahNowSnap) {
+        return Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            returnedSalahColumn(0, salahNowSnap),
+            returnedSalahColumn(1, salahNowSnap),
+            returnedSalahColumn(2, salahNowSnap),
+            returnedSalahColumn(3, salahNowSnap),
+            returnedSalahColumn(4, salahNowSnap),
+          ],
+        );
+      },
     );
   }
 
-  Widget? handleSalah(AsyncSnapshot<AzanModel> snapShot, int index,
-      AsyncSnapshot<Map<String, String>> salahNowSnap) {
-    if (snapShot.connectionState == ConnectionState.waiting) {
-      return const Center(child: CircularProgressIndicator());
-    } else if (snapShot.hasData) {
-      return returnedSalahColumn(snapShot, index, salahNowSnap);
-    } else {
-      return const Text('اعد تحميل الصفحة الحالية');
-    }
-  }
-
-  SalahColumn returnedSalahColumn(AsyncSnapshot<AzanModel> snapShot, int index,
-      AsyncSnapshot<Map<String, String>> salahNowSnap) {
-    AzanModel prayTime = snapShot.data!;
+  SalahColumn returnedSalahColumn(int index, salahNowSnap) {
+    AzanModel prayTime = azanGlobal!;
     final List<AzanModel> azan = [
       AzanModel(
         title: 'الفجر',

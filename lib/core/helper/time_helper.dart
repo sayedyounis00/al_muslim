@@ -1,5 +1,4 @@
-import 'package:al_muslim/features/home/data/model/azan_model.dart';
-import 'package:al_muslim/features/home/presentation/view%20model/azan_services.dart';
+import 'package:al_muslim/features/salah/presentation/view%20model/cubit/salah_cubit.dart';
 import 'package:intl/intl.dart';
 
 class TimeHelper {
@@ -30,7 +29,12 @@ class TimeHelper {
   Future<Map<String, String>> getRemaindSalahinfo() async {
     DateTime now = DateTime.now();
 
-    AzanModel azan = await PrayTimeServices().getDataFromDB();
+    var azan = azanGlobal;
+
+    if (azan == null) {
+      return {'': '00:00:00'};
+    }
+
     prayTimes = {
       'الفجر': azan.timings.fajr,
       'الظهر': azan.timings.dhuhr,

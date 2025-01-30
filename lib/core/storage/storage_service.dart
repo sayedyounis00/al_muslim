@@ -4,7 +4,7 @@ import 'package:al_muslim/core/networking/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class StorageService {
-  static void setToLDB(
+  static Future<void> setToLDB(
       {required String keyInLDB, required String apiLink}) async {
     dynamic dataFromApi = await ApiServices().getData(endPoint: apiLink);
 

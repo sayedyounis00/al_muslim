@@ -13,7 +13,7 @@ dependencies:
   dio: ^5.6.0
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.6
+  flutter_bloc:
   flutter_native_splash: ^2.4.1
   flutter_qiblah: ^3.0.3
   flutter_reaction_button: ^3.0.0+3
