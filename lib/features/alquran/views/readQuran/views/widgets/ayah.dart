@@ -3,8 +3,10 @@ import 'package:al_muslim/core/widgets/space.dart';
 import 'package:al_muslim/features/alquran/data/model/tafser_model.dart';
 import 'package:al_muslim/features/alquran/data/tafser_services.dart';
 import 'package:al_muslim/features/alquran/views/readQuran/views/widgets/screen_shot_view.dart';
+import 'package:al_muslim/features/favorites/presentation/view%20model/cubit/fav_cubit.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_reaction_button/flutter_reaction_button.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:just_audio/just_audio.dart';
@@ -230,6 +232,7 @@ class _AyahState extends State<Ayah> {
         time: 1,
       );
     }
+    context.read<FavCubit>().quranReloadLastAya();
     setState(() {});
   }
 

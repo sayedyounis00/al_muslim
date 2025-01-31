@@ -16,6 +16,7 @@ class ImageData {
   static String azkar = 'assets/icons/prayer.png';
   static String allah = 'assets/icons/allah.png';
   static String podcast = 'assets/icons/microphone.png';
+  static String allahAkbar = 'assets/images/Radio_logo.png';
 
   // =============== hadith =====================
   static String trmzy =

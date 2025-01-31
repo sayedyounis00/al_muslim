@@ -10,17 +10,10 @@ class PageCover extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 300,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(
-            image ??
-                'assets/images/—Pngtree—beautiful al quran kareem islamic_6848467.png',
-          ),
-        ),
-      ),
-    );
+    return Center(
+        child: Image.asset(
+      'assets/images/Radio_logo.png',
+      scale: 3,
+    ));
   }
 }

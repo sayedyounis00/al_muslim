@@ -7,3 +7,5 @@ final class AddFav extends FavState {}
 final class RemoveFav extends FavState {}
 
 final class FoundState extends FavState {}
+
+final class QuranReloadState extends FavState {}

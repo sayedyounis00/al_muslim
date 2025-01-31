@@ -73,8 +73,7 @@ class _RadioMasrViewState extends State<RadioMasrView> {
           Column(
             children: [
               const PageCover(
-                image:
-                    'assets/images/—Pngtree—beautiful al quran kareem islamic_6848467.png',
+                image: 'assets/images/Radio_logo.png',
               ),
               const SpaceV(100),
               Row(

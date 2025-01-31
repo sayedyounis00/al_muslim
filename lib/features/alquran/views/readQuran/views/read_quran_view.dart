@@ -56,7 +56,6 @@ class _ReadQuranViewState extends State<ReadQuranView> {
 
   void getLastAyah(int suraIndex) async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-
     if (pref.containsKey('last_sura_num')) {
       if (pref.getInt('last_sura_num') == suraIndex) {
         int lastAyahNum = pref.getInt('last_aya_num') ?? 0;

@@ -53,7 +53,7 @@ class _MainWidgetState extends State<MainWidget> {
             designSize: const Size(375, 812),
             minTextAdapt: true,
             child: BlocProvider(
-              create: (context) => FavCubit(),
+              create: (context) => FavCubit()..quranReloadLastAya(),
               child: MaterialApp(
                 debugShowCheckedModeBanner: false,
                 title: 'المسلم',

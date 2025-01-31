@@ -56,7 +56,7 @@ class _AllRadioViewBodyState extends State<AllRadioViewBody> {
       children: [
         const CustomAppBar(
           header: 'الاذاعه',
-          desc: 'يمكنك الاستماع الي اذاعه القران الكريم لعدد كبير كم القراء',
+          desc: 'يمكنك الاستماع الي اذاعه القران الكريم لعدد كبير من القراء',
         ),
         buildTextFeild(),
         FutureBuilder(

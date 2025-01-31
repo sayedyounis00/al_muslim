@@ -54,4 +54,8 @@ class FavCubit extends Cubit<FavState> {
     }
     return false;
   }
+
+  void quranReloadLastAya() {
+    emit(QuranReloadState());
+  }
 }

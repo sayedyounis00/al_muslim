@@ -14,16 +14,30 @@ class AzanList extends StatelessWidget {
     return FutureBuilder(
       future: TimeHelper().getRemaindSalahinfo(),
       builder: (context, salahNowSnap) {
-        return Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            returnedSalahColumn(0, salahNowSnap),
-            returnedSalahColumn(1, salahNowSnap),
-            returnedSalahColumn(2, salahNowSnap),
-            returnedSalahColumn(3, salahNowSnap),
-            returnedSalahColumn(4, salahNowSnap),
-          ],
-        );
+        if (salahNowSnap.hasData) {
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              returnedSalahColumn(0, salahNowSnap),
+              returnedSalahColumn(1, salahNowSnap),
+              returnedSalahColumn(2, salahNowSnap),
+              returnedSalahColumn(3, salahNowSnap),
+              returnedSalahColumn(4, salahNowSnap),
+            ],
+          );
+        } else if (salahNowSnap.connectionState == ConnectionState.waiting) {
+          return const Center(
+            child: CircularProgressIndicator(
+              color: Colors.orange,
+            ),
+          );
+        } else {
+          return const Center(
+              child: Text(
+            'حدث خطا في تحميل البيانات',
+            style: TextStyle(color: Colors.white),
+          ));
+        }
       },
     );
   }
