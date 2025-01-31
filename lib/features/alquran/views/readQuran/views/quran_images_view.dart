@@ -44,7 +44,7 @@ class _QuranImagesScreenState extends State<QuranImagesScreen> {
                   ),
                 ),
                 child: CachedNetworkImage(
-                    color: Theme.of(context).textTheme.headlineLarge!.color,
+                    color: Theme.of(context).textTheme.labelLarge!.color,
                     imageUrl: imgUrl,
                     placeholder: (context, url) => const Center(
                         child: CircularProgressIndicator(color: Colors.orange)),
@@ -57,6 +57,7 @@ class _QuranImagesScreenState extends State<QuranImagesScreen> {
                 style: TextStyle(
                   fontSize: 15.sp,
                   fontWeight: FontWeight.bold,
+                  color: Theme.of(context).textTheme.labelLarge!.color,
                 ),
               ),
             ],

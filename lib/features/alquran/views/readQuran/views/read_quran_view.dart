@@ -90,7 +90,7 @@ class _ReadQuranViewState extends State<ReadQuranView> {
                       setState(() {});
                       pref.setBool('read_mode', imageMode);
                     },
-                    color: Colors.black,
+                    color: Theme.of(context).textTheme.labelLarge!.color,
                     icon: Icon(!imageMode
                         ? Icons.menu_book_sharp
                         : Icons.notes_rounded)),

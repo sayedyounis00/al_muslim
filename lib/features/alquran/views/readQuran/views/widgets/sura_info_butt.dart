@@ -17,7 +17,7 @@ class SuraInfoButton extends StatelessWidget {
           showDialog(
             context: context,
             builder: (context) {
-              return Dialog(
+              return Dialog(backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
@@ -87,7 +87,8 @@ class SuraInfoButton extends StatelessWidget {
           );
         },
         iconSize: 30,
-        icon: const Icon(Icons.info_outline, color: Color.fromARGB(255, 88, 205, 92)),
+        icon: Icon(Icons.info_outline,
+            color: Theme.of(context).textTheme.labelLarge!.color),
       ),
     );
   }
