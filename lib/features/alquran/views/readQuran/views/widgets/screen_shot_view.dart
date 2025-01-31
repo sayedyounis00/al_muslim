@@ -2,7 +2,7 @@ import 'dart:typed_data';
 
 import 'package:al_muslim/core/utils/images_data.dart';
 import 'package:al_muslim/core/widgets/space.dart';
-import 'package:al_muslim/features/alquran/views/readQuran/widgets/header_widget.dart';
+import 'package:al_muslim/features/alquran/views/readQuran/views/widgets/header_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:image_gallery_saver_plus/image_gallery_saver_plus.dart';
 import 'package:permission_handler/permission_handler.dart';

@@ -87,8 +87,7 @@ class SuraInfoButton extends StatelessWidget {
           );
         },
         iconSize: 30,
-        icon: const Icon(Icons.info_outline,
-            color: Color.fromARGB(255, 88, 205, 92)),
+        icon: const Icon(Icons.info_outline, color: Color.fromARGB(255, 88, 205, 92)),
       ),
     );
   }

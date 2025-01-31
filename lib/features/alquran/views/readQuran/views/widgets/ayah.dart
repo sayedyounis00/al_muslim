@@ -2,7 +2,7 @@ import 'package:al_muslim/core/widgets/isnside_noti.dart';
 import 'package:al_muslim/core/widgets/space.dart';
 import 'package:al_muslim/features/alquran/data/model/tafser_model.dart';
 import 'package:al_muslim/features/alquran/data/tafser_services.dart';
-import 'package:al_muslim/features/alquran/views/readQuran/widgets/screen_shot_view.dart';
+import 'package:al_muslim/features/alquran/views/readQuran/views/widgets/screen_shot_view.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_reaction_button/flutter_reaction_button.dart';
