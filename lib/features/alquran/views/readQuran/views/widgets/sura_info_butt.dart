@@ -17,7 +17,8 @@ class SuraInfoButton extends StatelessWidget {
           showDialog(
             context: context,
             builder: (context) {
-              return Dialog(backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+              return Dialog(
+                backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(

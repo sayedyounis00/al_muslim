@@ -35,16 +35,20 @@ class _QuranImagesScreenState extends State<QuranImagesScreen> {
             children: [
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(horizontal: 3),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   border: Border.all(
                     color: Theme.of(context).primaryColor,
-                    width: 3.0,
+                    width: 2.0,
                   ),
                 ),
                 child: CachedNetworkImage(
-                    color: Theme.of(context).textTheme.labelLarge!.color,
+                    // color: Theme.of(context).textTheme.labelLarge!.color,
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Theme.of(context).textTheme.labelLarge!.color
+                        : const Color.fromARGB(255, 21, 81, 137),
                     imageUrl: imgUrl,
                     placeholder: (context, url) => const Center(
                         child: CircularProgressIndicator(color: Colors.orange)),
