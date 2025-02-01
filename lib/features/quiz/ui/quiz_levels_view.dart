@@ -26,15 +26,15 @@ class QuizLevelsView extends StatelessWidget {
               children: [
                 LevelCard(
                   levelName: 'المستوي الاول',
-                  quizList: level1,
+                  quizList: QuizData.level1(),
                 ),
                 LevelCard(
                   levelName: 'المستوي الثاني',
-                  quizList: level1,
+                  quizList: QuizData.level2(),
                 ),
                 LevelCard(
                   levelName: 'المستوي الثالث',
-                  quizList: level1,
+                  quizList: QuizData.level3(),
                 ),
               ],
             ),

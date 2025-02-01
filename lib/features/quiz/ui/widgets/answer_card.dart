@@ -9,6 +9,7 @@ class AnswerCard extends StatefulWidget {
   final String levelName;
   final int correctAns;
   final int index;
+  final int qNowNum;
   final int qNums;
   final PageController con;
   const AnswerCard({
@@ -19,6 +20,7 @@ class AnswerCard extends StatefulWidget {
     required this.con,
     required this.qNums,
     required this.levelName,
+    required this.qNowNum,
   });
 
   @override
@@ -48,7 +50,7 @@ class _AnswerCardState extends State<AnswerCard> {
         if (widget.correctAns == widget.index) {
           trueOrfalse = 1;
           setState(() {});
-          if ((widget.qNums - 1) == widget.index) {
+          if ((widget.qNums - 1) == widget.qNowNum) {
             SharedPreferences pref = await SharedPreferences.getInstance();
             pref.setString('level', levelNameConverter(widget.levelName));
             await Future.delayed(

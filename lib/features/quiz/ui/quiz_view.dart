@@ -13,7 +13,6 @@ class QuizView extends StatelessWidget {
   Widget build(BuildContext context) {
     PageController controller = PageController();
 
-
     return Scaffold(
       body: Column(
         children: [
@@ -62,6 +61,7 @@ class QuizView extends StatelessWidget {
                               levelName: levelName,
                               con: controller,
                               index: ansIndex,
+                              qNowNum: quizIndex,
                               qNums: quizList.length,
                               correctAns: quizList[quizIndex].correctAns,
                               ans: quizList[quizIndex].answers[ansIndex],
