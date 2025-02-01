@@ -23,7 +23,6 @@ class TafserServices {
     for (var item in tafserMap) {
       tafserList.add(TafserModel.fromJson(item));
     }
-    // log(tafserList[1].ayahTafser.toString());
     return tafserList;
   }
 }

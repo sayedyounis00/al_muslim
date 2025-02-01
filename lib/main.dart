@@ -10,7 +10,8 @@ import 'package:al_muslim/core/notification/noti_service.dart';
 @pragma('vm:entry-point')
 void callbackDispatcher() {
   Workmanager().executeTask((task, inputData) async {
-    await NotificationService.removeAllNotifications();
+    await NotificationService.removeChannel();
+    await NotificationService.initNotification();
     await NotificationService.createPrayerNotifications();
     return Future.value(true);
   });

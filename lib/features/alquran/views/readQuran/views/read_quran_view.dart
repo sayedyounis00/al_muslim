@@ -67,6 +67,7 @@ class _ReadQuranViewState extends State<ReadQuranView> {
       }
     }
     scrollController = ItemScrollController();
+  
   }
 
   @override

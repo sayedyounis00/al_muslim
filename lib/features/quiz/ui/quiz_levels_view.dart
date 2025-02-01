@@ -12,7 +12,7 @@ class QuizLevelsView extends StatelessWidget {
       body: Column(
         children: [
           const CustomAppBar(
-            header: 'اختبر معلوماتك',
+            header: 'اختبر معلوماتك الدينية',
             desc: 'اختر مستوي الاختبار',
           ),
           Expanded(
