@@ -6,6 +6,7 @@ import 'package:al_muslim/features/hadith/presentation/view/hadith_view.dart';
 import 'package:al_muslim/features/home/presentation/views/widgets/features%20cards/feature_card.dart';
 import 'package:al_muslim/features/podcast/ui/all_podcast_screen.dart';
 import 'package:al_muslim/features/qubla/presentation/views/qibla_view.dart';
+import 'package:al_muslim/features/quiz/ui/quiz_levels_view.dart';
 import 'package:al_muslim/features/radio/views/all_radios_view.dart';
 import 'package:al_muslim/features/radio/views/masr_radio_view.dart';
 import 'package:al_muslim/features/sabha/presentation/views/sebha_view.dart';
@@ -86,6 +87,11 @@ class FeaturesGridView extends StatelessWidget {
                     navigateTo: const AllPodcastsScreen(),
                     title: 'البودكاست',
                     imagePath: ImageData.podcast,
+                  ),
+                  const FeatureCard(
+                    navigateTo: QuizLevelsView(),
+                    title: 'اختبارات',
+                    // imagePath: ImageData.logo,
                   ),
                 ],
               ),
