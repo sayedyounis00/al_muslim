@@ -78,7 +78,7 @@ class _AnswerCardState extends State<AnswerCard> {
           }
         } else {
           trueOrfalse = 0;
-          Vibration.vibrate(duration: 1000, amplitude: 1);
+          Vibration.vibrate();
           Future.delayed(
             const Duration(seconds: 1),
             () {

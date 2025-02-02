@@ -29,7 +29,7 @@ class _AyahState extends State<Ayah> {
   bool isSharing = false;
   int indexx = 1;
 
-  void hasBookMark()  {
+  void hasBookMark() {
     // SharedPreferences pref = await SharedPreferences.getInstance();
     if (pref.containsKey('last_sura_num')) {
       if (pref.getInt('last_sura_num') == widget.surahIndex &&
@@ -167,7 +167,10 @@ class _AyahState extends State<Ayah> {
         },
         child: Container(
           decoration: BoxDecoration(
-            border: playingAudio ? Border.all() : const Border(),
+            border: playingAudio
+                ? Border.all(
+                    color: Theme.of(context).textTheme.labelLarge!.color!)
+                : const Border(),
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -244,11 +247,12 @@ class _AyahState extends State<Ayah> {
       final url = quran.getAudioURLByVerse(
           widget.surahIndex + 1, widget.verseIndex + 1);
       final duration = await player.setUrl(url);
-      player.play();
+      await player.play();
       Future.delayed(
         duration ?? const Duration(milliseconds: 5),
         () {
           playingAudio = false;
+          setState(() {});
         },
       );
     } else {

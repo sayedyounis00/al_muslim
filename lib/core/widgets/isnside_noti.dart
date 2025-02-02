@@ -33,12 +33,13 @@ class InsideNotification {
         text: 'من تطبيق المُسْلِم');
   }
 
-  static void insideNotificationCard(
-      {required ContentType contentType,
-      required BuildContext context,
-      required String title,
-      required String content,
-      int time = 3}) {
+  static void insideNotificationCard({
+    required ContentType contentType,
+    required BuildContext context,
+    required String title,
+    required String content,
+    int time = 3,
+  }) {
     final materialBanner = MaterialBanner(
       elevation: 50000,
       backgroundColor: Colors.transparent,

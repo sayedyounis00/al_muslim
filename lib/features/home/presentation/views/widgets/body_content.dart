@@ -21,6 +21,7 @@ class BodyContent extends StatelessWidget {
         QuranCard(),
         SpaceV(3),
         FeaturesGridView(),
+        SpaceV(3),
         RoutineTrackCard(),
         RandomCard(),
         SpaceV(20),

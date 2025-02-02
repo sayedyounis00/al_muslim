@@ -63,9 +63,6 @@ class _NewLandingViewState extends State<NewLandingView> {
                 setState(() {});
                 try {
                   await SalahServices().setDayData();
-
-                  // SharedPreferences prefs =
-                  //     await SharedPreferences.getInstance();
                   pref.setBool('hasSeenLandingPage', true);
                   Workmanager().registerPeriodicTask(
                     'azan',

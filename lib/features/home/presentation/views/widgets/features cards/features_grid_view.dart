@@ -21,83 +21,75 @@ class FeaturesGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * .32,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(
-          children: [
-            Expanded(
-              child: GridView.count(
-                padding: EdgeInsets.zero,
-                physics: const NeverScrollableScrollPhysics(),
-                crossAxisCount: 4,
-                children: [
-                  FeatureCard(
-                    title: 'الأحاديث',
-                    imagePath: ImageData.book,
-                    navigateTo: const HadithView(),
-                  ),
-                  FeatureCard(
-                    title: 'الصلاة',
-                    imagePath: ImageData.prayTime,
-                    navigateTo: const SalahView(),
-                  ),
-                  FeatureCard(
-                    title: 'رأديو',
-                    imagePath: ImageData.radio,
-                    navigateTo: const AllRadiosView(),
-                  ),
-                  FeatureCard(
-                    title: 'الأذكار',
-                    imagePath: ImageData.azkar,
-                    navigateTo: const ALlAzkarView(),
-                  ),
-                  FeatureCard(
-                    title: ' اذاعه مصر',
-                    imagePath: ImageData.radioMasr,
-                    navigateTo: const RadioMasrView(),
-                  ),
-                  FeatureCard(
-                    title: 'المفضلة',
-                    imagePath: ImageData.bookmark,
-                    navigateTo: const FavView(),
-                  ),
-                  FeatureCard(
-                    navigateTo: const QiblaView(),
-                    title: 'القبلة',
-                    imagePath: ImageData.qibla,
-                  ),
-                  FeatureCard(
-                    title: 'السبحة',
-                    imagePath: ImageData.thbha,
-                    navigateTo: const SebhaView(),
-                  ),
-                  FeatureCard(
-                    title: 'السيرة النبوية',
-                    navigateTo: const SeraView(),
-                    imagePath: ImageData.sera,
-                  ),
-                  FeatureCard(
-                    navigateTo: const AsmaaAllahView(),
-                    title: 'الأسماء الحسني',
-                    imagePath: ImageData.allah,
-                  ),
-                  FeatureCard(
-                    navigateTo: const AllPodcastsScreen(),
-                    title: 'البودكاست',
-                    imagePath: ImageData.podcast,
-                  ),
-                  FeatureCard(
-                    navigateTo: const QuizLevelsView(),
-                    title: 'اختبارات',
-                    imagePath: ImageData.quiz,
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      child: GridView.count(
+        shrinkWrap: true,
+        padding: EdgeInsets.zero,
+        physics: const NeverScrollableScrollPhysics(),
+        crossAxisCount: 4,
+        children: [
+          FeatureCard(
+            title: 'الأحاديث',
+            imagePath: ImageData.book,
+            navigateTo: const HadithView(),
+          ),
+          FeatureCard(
+            title: 'الصلاة',
+            imagePath: ImageData.prayTime,
+            navigateTo: const SalahView(),
+          ),
+          FeatureCard(
+            title: 'رأديو',
+            imagePath: ImageData.radio,
+            navigateTo: const AllRadiosView(),
+          ),
+          FeatureCard(
+            title: 'الأذكار',
+            imagePath: ImageData.azkar,
+            navigateTo: const ALlAzkarView(),
+          ),
+          FeatureCard(
+            title: ' اذاعه مصر',
+            imagePath: ImageData.radioMasr,
+            navigateTo: const RadioMasrView(),
+          ),
+          FeatureCard(
+            title: 'المفضلة',
+            imagePath: ImageData.bookmark,
+            navigateTo: const FavView(),
+          ),
+          FeatureCard(
+            navigateTo: const QiblaView(),
+            title: 'القبلة',
+            imagePath: ImageData.qibla,
+          ),
+          FeatureCard(
+            title: 'السبحة',
+            imagePath: ImageData.thbha,
+            navigateTo: const SebhaView(),
+          ),
+          FeatureCard(
+            title: 'السيرة النبوية',
+            navigateTo: const SeraView(),
+            imagePath: ImageData.sera,
+          ),
+          FeatureCard(
+            navigateTo: const AsmaaAllahView(),
+            title: 'الأسماء الحسني',
+            imagePath: ImageData.allah,
+          ),
+          FeatureCard(
+            navigateTo: const AllPodcastsScreen(),
+            title: 'البودكاست',
+            imagePath: ImageData.podcast,
+          ),
+          FeatureCard(
+            navigateTo: const QuizLevelsView(),
+            title: 'اختبارات',
+            imagePath: ImageData.quiz,
+          ),
+        ],
       ),
     );
   }

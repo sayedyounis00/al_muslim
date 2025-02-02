@@ -31,31 +31,28 @@ class RoutineTrackCard extends StatelessWidget {
           );
         },
         child: Card(
-          child: Container(
-            height: MediaQuery.of(context).size.width / 5,
-            padding: const EdgeInsets.symmetric(vertical: 8),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
             child: Column(
               children: [
-                const SizedBox(height: 10),
+                // const SizedBox(height: 10),
                 Text(
                   'ختمات القرآن',
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
-                Expanded(
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(right: 10, left: 10, top: 20),
-                    child: LinearProgressBar(
-                      borderRadius: BorderRadius.circular(20),
-                      progressType: LinearProgressBar.progressTypeLinear,
-                      progressColor: Colors.orange,
-                      backgroundColor: Colors.white,
-                      minHeight: 1,
-                      maxSteps: 9,
-                      currentStep: 1,
-                    ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 10, left: 10, top: 15),
+                  child: LinearProgressBar(
+                    borderRadius: BorderRadius.circular(20),
+                    progressType: LinearProgressBar.progressTypeLinear,
+                    progressColor: Colors.orange,
+                    backgroundColor: Colors.white,
+                    minHeight: 6,
+                    maxSteps: 9,
+                    currentStep: 1,
                   ),
-                )
+                ),
+                // const SizedBox(height: 5),
               ],
             ),
           ),
