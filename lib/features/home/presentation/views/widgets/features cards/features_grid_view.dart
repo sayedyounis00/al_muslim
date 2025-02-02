@@ -80,7 +80,7 @@ class FeaturesGridView extends StatelessWidget {
                   ),
                   FeatureCard(
                     navigateTo: const AsmaaAllahView(),
-                    title: 'اسماء الله',
+                    title: 'الأسماء الحسني',
                     imagePath: ImageData.allah,
                   ),
                   FeatureCard(
@@ -88,10 +88,10 @@ class FeaturesGridView extends StatelessWidget {
                     title: 'البودكاست',
                     imagePath: ImageData.podcast,
                   ),
-                  const FeatureCard(
-                    navigateTo: QuizLevelsView(),
+                  FeatureCard(
+                    navigateTo: const QuizLevelsView(),
                     title: 'اختبارات',
-                    // imagePath: ImageData.logo,
+                    imagePath: ImageData.quiz,
                   ),
                 ],
               ),

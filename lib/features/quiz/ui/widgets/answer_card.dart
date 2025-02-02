@@ -67,7 +67,7 @@ class _AnswerCardState extends State<AnswerCard> {
             Navigator.pop(context);
           } else {
             Future.delayed(
-              const Duration(seconds: 1),
+              const Duration(milliseconds: 500),
               () {
                 widget.con.nextPage(
                   duration: const Duration(milliseconds: 200),
@@ -114,6 +114,7 @@ class _AnswerCardState extends State<AnswerCard> {
             ),
             Center(
                 child: Text(widget.ans,
+                    textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.labelLarge!)),
           ],
         ),

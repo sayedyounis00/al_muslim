@@ -17,6 +17,7 @@ class ImageData {
   static String allah = 'assets/icons/allah.png';
   static String podcast = 'assets/icons/microphone.png';
   static String allahAkbar = 'assets/images/Radio_logo.png';
+  static String quiz = 'assets/images/rating.png';
 
   // =============== hadith =====================
   static String trmzy =
@@ -30,12 +31,7 @@ class ImageData {
   static String muslim = 'assets/images/صحيح-مسلم.jpg';
   static String ahmed = 'assets/images/مسند_احمد.webp';
 
-
 // ==================podcast=====================
   static String podcastWae = 'assets/images/wae.jpg';
   static String podcastEhLmoshkla = 'assets/images/moshcila.jpg';
-
-
 }
-
-
