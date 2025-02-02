@@ -1,3 +1,4 @@
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/core/utils/images_data.dart';
 import 'package:al_muslim/core/widgets/space.dart';
 import 'package:al_muslim/features/alquran/views/readQuran/views/read_quran_view.dart';
@@ -6,14 +7,13 @@ import 'package:al_muslim/features/favorites/presentation/view%20model/cubit/fav
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:quran/quran.dart' as quran;
 
 class LastReadCard extends StatelessWidget {
   const LastReadCard({super.key});
 
   Future<Map<int, int>?> loadLastData() async {
-    SharedPreferences pref = await SharedPreferences.getInstance();
+    // SharedPreferences pref = await SharedPreferences.getInstance();
     int? suraNum = pref.getInt('last_sura_num');
     int? ayaNum = pref.getInt('last_aya_num');
     if (suraNum != null && ayaNum != null) {

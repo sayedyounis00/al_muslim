@@ -1,8 +1,8 @@
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/core/utils/constants.dart';
 import 'package:al_muslim/features/settings/presentation/view%20model/cubit/setting_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingCubit extends Cubit<SettingState> {
   SettingCubit() : super(SettingInitial());
@@ -12,37 +12,37 @@ class SettingCubit extends Cubit<SettingState> {
   Color conColor = AppColors.kPrimaryColLight;
   double myFont = 20.0;
 
-  void setTheme({required ThemeMode theme}) async {
-    SharedPreferences asyncPref = await SharedPreferences.getInstance();
-    asyncPref.setString('theme', theme.toString());
+  void setTheme({required ThemeMode theme})  {
+    // SharedPreferences asyncPref = await SharedPreferences.getInstance();
+    pref.setString('theme', theme.toString());
     myTheme = theme;
     initialDataFromLDB();
   }
 
-  void setFont({required double font}) async {
-    SharedPreferences asyncPref = await SharedPreferences.getInstance();
-    asyncPref.setDouble('font', font);
+  void setFont({required double font})  {
+    // SharedPreferences asyncPref = await SharedPreferences.getInstance();
+    pref.setDouble('font', font);
     myFont = font;
     initialDataFromLDB();
   }
 
   void setbgColor({required int color}) async {
-    SharedPreferences asyncPref = await SharedPreferences.getInstance();
-    asyncPref.setInt('bgcolor', color);
+    // SharedPreferences asyncPref = await SharedPreferences.getInstance();
+    pref.setInt('bgcolor', color);
     myColor = Color(color);
     initialDataFromLDB();
   }
 
   void setContainerColor({required int color}) async {
-    SharedPreferences asyncPref = await SharedPreferences.getInstance();
-    asyncPref.setInt('conColor', color);
+    // SharedPreferences asyncPref = await SharedPreferences.getInstance();
+    pref.setInt('conColor', color);
     conColor = Color(color);
     initialDataFromLDB();
   }
 
 // Get data
   void initialDataFromLDB() async {
-    SharedPreferences pref = await SharedPreferences.getInstance();
+    // SharedPreferences pref = await SharedPreferences.getInstance();
     if (pref.getDouble('font') != null) {
       myFont = pref.getDouble('font')!;
     }

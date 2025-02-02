@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:al_muslim/core/helper/location.dart';
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/core/widgets/space.dart';
 import 'package:al_muslim/features/home/presentation/views/home_view.dart';
 import 'package:al_muslim/features/landing/widgets/landing_list_tile.dart';
@@ -8,7 +9,6 @@ import 'package:al_muslim/features/salah/presentation/view%20model/salah_service
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:workmanager/workmanager.dart';
 
 class NewLandingView extends StatefulWidget {
@@ -64,9 +64,9 @@ class _NewLandingViewState extends State<NewLandingView> {
                 try {
                   await SalahServices().setDayData();
 
-                  SharedPreferences prefs =
-                      await SharedPreferences.getInstance();
-                  prefs.setBool('hasSeenLandingPage', true);
+                  // SharedPreferences prefs =
+                  //     await SharedPreferences.getInstance();
+                  pref.setBool('hasSeenLandingPage', true);
                   Workmanager().registerPeriodicTask(
                     'azan',
                     'azanTask',

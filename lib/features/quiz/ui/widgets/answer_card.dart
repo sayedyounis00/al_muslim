@@ -1,7 +1,7 @@
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/core/widgets/isnside_noti.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vibration/vibration.dart';
 
 class AnswerCard extends StatefulWidget {
@@ -46,14 +46,14 @@ class _AnswerCardState extends State<AnswerCard> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () async {
+      onTap: () {
         if (widget.correctAns == widget.index) {
           trueOrfalse = 1;
           setState(() {});
           if ((widget.qNums - 1) == widget.qNowNum) {
-            SharedPreferences pref = await SharedPreferences.getInstance();
+            // SharedPreferences pref = await SharedPreferences.getInstance();
             pref.setString('level', levelNameConverter(widget.levelName));
-            await Future.delayed(
+            Future.delayed(
               const Duration(seconds: 1),
               () {
                 InsideNotification.insideNotificationCard(

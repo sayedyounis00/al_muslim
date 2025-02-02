@@ -1,3 +1,4 @@
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/core/widgets/custom_app_bar.dart';
 import 'package:al_muslim/core/widgets/isnside_noti.dart';
 import 'package:al_muslim/features/alquran/data/fehres_service.dart';
@@ -9,7 +10,6 @@ import 'package:al_muslim/features/radio/views/radio_view.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class AllSwarViewBody extends StatefulWidget {
   final String pageRoute;
@@ -46,8 +46,8 @@ class _AllSwarViewBodyState extends State<AllSwarViewBody> {
           desc: '',
           downloadIcon: Icons.bookmark,
           hasDownload: isReadingView(),
-          downloadButt: () async {
-            final pref = await SharedPreferences.getInstance();
+          downloadButt: ()  {
+            // final pref = await SharedPreferences.getInstance();
             final lastSuraNum = pref.getInt('last_sura_num');
             if (lastSuraNum != null) {
               Navigator.push(

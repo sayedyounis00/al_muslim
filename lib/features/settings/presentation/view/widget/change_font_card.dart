@@ -1,8 +1,8 @@
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/core/utils/constants.dart';
 import 'package:al_muslim/features/settings/presentation/view%20model/cubit/setting_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class ChangeFontCard extends StatefulWidget {
   const ChangeFontCard({
@@ -23,11 +23,11 @@ class _ChangeFontCardState extends State<ChangeFontCard> {
     super.initState();
   }
 
-  void initialDataFromLDB() async {
-    SharedPreferences asyncPref = await SharedPreferences.getInstance();
+  void initialDataFromLDB()  {
+    // SharedPreferences asyncPref = await SharedPreferences.getInstance();
 
-    if (asyncPref.getDouble('font') != null) {
-      size = asyncPref.getDouble('font')!;
+    if (pref.getDouble('font') != null) {
+      size = pref.getDouble('font')!;
       val = size;
       setState(() {});
     }

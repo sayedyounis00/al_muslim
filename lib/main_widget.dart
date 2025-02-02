@@ -1,3 +1,4 @@
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/core/themes/theme_data.dart';
 import 'package:al_muslim/features/favorites/presentation/view%20model/cubit/fav_cubit.dart';
 import 'package:al_muslim/features/home/presentation/views/home_view.dart';
@@ -9,7 +10,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class MainWidget extends StatefulWidget {
   const MainWidget({super.key});
@@ -29,8 +29,8 @@ class _MainWidgetState extends State<MainWidget> {
   }
 
   Future<void> _checkLandingPage() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    hasSeenLandingPage = prefs.getBool('hasSeenLandingPage') ?? false;
+    // SharedPreferences prefs = await SharedPreferences.getInstance();
+    hasSeenLandingPage = pref.getBool('hasSeenLandingPage') ?? false;
     setState(() {});
   }
 

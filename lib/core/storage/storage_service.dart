@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:al_muslim/core/networking/services.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 
 class StorageService {
   static Future<void> setToLDB(
@@ -9,21 +9,21 @@ class StorageService {
     dynamic dataFromApi = await ApiServices().getData(endPoint: apiLink);
 
     String dataEncoded = jsonEncode(dataFromApi);
-    SharedPreferences asyncPref = await SharedPreferences.getInstance();
-    asyncPref.setString(keyInLDB, dataEncoded);
+    // SharedPreferences asyncPref = await SharedPreferences.getInstance();
+    pref.setString(keyInLDB, dataEncoded);
   }
 
-  static getFromLDB({required String key}) async {
-    SharedPreferences asyncPref = await SharedPreferences.getInstance();
-    String data = asyncPref.getString(key) ?? '';
+  static getFromLDB({required String key})  {
+    // SharedPreferences asyncPref = await SharedPreferences.getInstance();
+    String data = pref.getString(key) ?? '';
     dynamic jsonData = jsonDecode(data);
 
     return jsonData;
   }
 
-  static hasDataInLDB({required String key}) async {
-    SharedPreferences asyncPref = await SharedPreferences.getInstance();
-    bool hasData = asyncPref.containsKey(key);
+  static hasDataInLDB({required String key})  {
+    // SharedPreferences pref = await SharedPreferences.getInstance();
+    bool hasData = pref.containsKey(key);
 
     return hasData;
   }

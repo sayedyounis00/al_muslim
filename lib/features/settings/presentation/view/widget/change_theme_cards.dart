@@ -1,8 +1,8 @@
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/core/widgets/space.dart';
 import 'package:al_muslim/features/settings/presentation/view%20model/cubit/setting_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class ChangeThemeCard extends StatefulWidget {
   const ChangeThemeCard({
@@ -23,13 +23,13 @@ class _ChangeThemeCardState extends State<ChangeThemeCard> {
     super.initState();
   }
 
-  void initialDataFromLDB() async {
-    SharedPreferences asyncPref = await SharedPreferences.getInstance();
-    if (asyncPref.getString('theme') == 'ThemeMode.dark') {
+  void initialDataFromLDB()  {
+    // SharedPreferences asyncPref = await SharedPreferences.getInstance();
+    if (pref.getString('theme') == 'ThemeMode.dark') {
       curOption = options[1];
-    } else if (asyncPref.getString('theme') == 'ThemeMode.light') {
+    } else if (pref.getString('theme') == 'ThemeMode.light') {
       curOption = options[0];
-    } else if (asyncPref.getString('theme') == 'ThemeMode.system') {
+    } else if (pref.getString('theme') == 'ThemeMode.system') {
       curOption = options[2];
     }
     setState(() {});

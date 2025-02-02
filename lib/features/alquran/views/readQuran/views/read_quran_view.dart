@@ -1,3 +1,4 @@
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/core/widgets/custom_app_bar.dart';
 import 'package:al_muslim/core/widgets/space.dart';
 import 'package:al_muslim/features/alquran/views/readQuran/views/quran_images_view.dart';
@@ -83,9 +84,9 @@ class _ReadQuranViewState extends State<ReadQuranView> {
               Padding(
                 padding: const EdgeInsets.only(right: 8.0, top: 20),
                 child: IconButton(
-                    onPressed: () async {
-                      SharedPreferences pref =
-                          await SharedPreferences.getInstance();
+                    onPressed: ()  {
+                      // SharedPreferences pref =
+                      //     await SharedPreferences.getInstance();
                       imageMode = !imageMode;
                       setState(() {});
                       pref.setBool('read_mode', imageMode);

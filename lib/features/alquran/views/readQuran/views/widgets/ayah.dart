@@ -1,3 +1,4 @@
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/core/widgets/isnside_noti.dart';
 import 'package:al_muslim/core/widgets/space.dart';
 import 'package:al_muslim/features/alquran/data/model/tafser_model.dart';
@@ -11,7 +12,6 @@ import 'package:flutter_reaction_button/flutter_reaction_button.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:quran/quran.dart' as quran;
-import 'package:shared_preferences/shared_preferences.dart';
 
 class Ayah extends StatefulWidget {
   final int surahIndex;
@@ -29,8 +29,8 @@ class _AyahState extends State<Ayah> {
   bool isSharing = false;
   int indexx = 1;
 
-  void hasBookMark() async {
-    SharedPreferences pref = await SharedPreferences.getInstance();
+  void hasBookMark()  {
+    // SharedPreferences pref = await SharedPreferences.getInstance();
     if (pref.containsKey('last_sura_num')) {
       if (pref.getInt('last_sura_num') == widget.surahIndex &&
           pref.getInt('last_aya_num') == widget.verseIndex) {
@@ -213,7 +213,7 @@ class _AyahState extends State<Ayah> {
   }
 
   Future<void> mark(BuildContext context) async {
-    SharedPreferences pref = await SharedPreferences.getInstance();
+    // SharedPreferences pref = await SharedPreferences.getInstance();
     if (bookMark) {
       pref.remove('last_aya_num');
       pref.remove('last_sura_num');

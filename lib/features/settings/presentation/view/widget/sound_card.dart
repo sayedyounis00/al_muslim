@@ -1,7 +1,7 @@
 import 'package:al_muslim/core/notification/noti_service.dart';
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/core/widgets/space.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class SoundCard extends StatelessWidget {
   const SoundCard({
@@ -55,8 +55,8 @@ class _SoundSwitchState extends State<SoundSwitch> {
     sound();
   }
 
-  void sound() async {
-    SharedPreferences pref = await SharedPreferences.getInstance();
+  void sound() {
+    // SharedPreferences pref = await SharedPreferences.getInstance();
     isDone = pref.getBool('sound') ?? false;
     setState(() {});
   }
@@ -67,8 +67,8 @@ class _SoundSwitchState extends State<SoundSwitch> {
       activeColor: Colors.orange,
       value: isDone,
       onChanged: (needSound) async {
-        SharedPreferences asyncPref = await SharedPreferences.getInstance();
-        asyncPref.setBool('sound', needSound);
+        // SharedPreferences asyncPref = await SharedPreferences.getInstance();
+        pref.setBool('sound', needSound);
         await NotificationService.removeChannel();
         await NotificationService.initNotification();
         await NotificationService.createPrayerNotifications();

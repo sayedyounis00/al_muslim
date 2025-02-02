@@ -1,8 +1,8 @@
 import 'dart:convert';
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/features/athkar/data/models/zkr_item.dart';
 import 'package:al_muslim/features/favorites/presentation/view%20model/cubit/fav_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class FavCubit extends Cubit<FavState> {
   FavCubit() : super(FavInitial());
@@ -28,15 +28,15 @@ class FavCubit extends Cubit<FavState> {
   }
 
   Future<void> setFavToLDB() async {
-    final prefs = await SharedPreferences.getInstance();
+    // final prefs = await SharedPreferences.getInstance();
     var jsonList =
         allFavList.map((zekr) => json.encode(zekr.toJson())).toList();
-    await prefs.setStringList('fav_list', jsonList);
+    pref.setStringList('fav_list', jsonList);
   }
 
   Future<List<ZkrItem>> getFavFromLDB() async {
-    final prefs = await SharedPreferences.getInstance();
-    List<String> jsonList = prefs.getStringList('fav_list') ?? [];
+    // final prefs = await SharedPreferences.getInstance();
+    List<String> jsonList = pref.getStringList('fav_list') ?? [];
 
     return jsonList.map((jsonString) {
       Map<String, dynamic> jsonMap = json.decode(jsonString);

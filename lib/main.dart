@@ -1,3 +1,4 @@
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/features/settings/presentation/view%20model/cubit/setting_cubit.dart';
 import 'package:al_muslim/main_widget.dart';
 import 'package:flutter/material.dart';
@@ -19,9 +20,12 @@ void callbackDispatcher() {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await NotificationService.initNotification();
-  Workmanager().initialize(callbackDispatcher);
-  await Hive.initFlutter();
+  await LocalStorageService.init();
+  await Future.wait([
+    NotificationService.initNotification(),
+    Workmanager().initialize(callbackDispatcher),
+    Hive.initFlutter(),
+  ]);
   await Hive.openBox('hadith');
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   runApp(const AlMuslim());

@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:developer';
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/features/salah/data/model/day_data.dart';
 import 'package:al_muslim/features/salah/presentation/view%20model/salah_services.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class NotificationService {
   static bool _needSound = false;
@@ -17,7 +17,7 @@ class NotificationService {
         }
       },
     );
-    SharedPreferences pref = await SharedPreferences.getInstance();
+    // SharedPreferences pref = await SharedPreferences.getInstance();
     if (pref.containsKey('sound')) {
       _needSound = pref.getBool('sound') ?? false;
     }

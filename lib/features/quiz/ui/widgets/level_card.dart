@@ -1,8 +1,8 @@
+import 'package:al_muslim/core/storage/local_storage_service.dart';
 import 'package:al_muslim/features/quiz/data/model/quiz.dart';
 import 'package:al_muslim/features/quiz/ui/quiz_view.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class LevelCard extends StatefulWidget {
   final List<Quiz> quizList;
@@ -25,8 +25,8 @@ class _LevelCardState extends State<LevelCard> {
     super.initState();
   }
 
-  void loadLevelCompleted() async {
-    SharedPreferences pref = await SharedPreferences.getInstance();
+  void loadLevelCompleted()  {
+    // SharedPreferences pref = await SharedPreferences.getInstance();
     // pref.remove('level');
     userLevel = levelNameConverter(pref.getString('level'));
     setState(() {});
