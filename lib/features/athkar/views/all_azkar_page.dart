@@ -1,4 +1,5 @@
 import 'package:al_muslim/core/widgets/custom_app_bar.dart';
+import 'package:al_muslim/core/widgets/space.dart';
 import 'package:al_muslim/features/athkar/data/azkar_services.dart';
 import 'package:al_muslim/features/athkar/views/widgets/zekr_category_card.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +27,13 @@ class ALlAzkarView extends StatelessWidget {
                   ),
                 );
               } else if (snapShot.connectionState == ConnectionState.waiting) {
-                return const Center(
-                    child: CircularProgressIndicator(color: Colors.orange));
+                return const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SpaceV(20),
+                    CircularProgressIndicator(color: Colors.orange),
+                  ],
+                );
               } else {
                 return const Text('error');
               }

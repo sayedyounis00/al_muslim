@@ -23,9 +23,14 @@ class ZekrCategoryCard extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.all(10),
         padding: const EdgeInsets.all(10),
-        height: 50,
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(16)),
+        decoration: BoxDecoration(
+          border: Border.all(
+              color: Theme.of(context)
+                  .textTheme
+                  .labelLarge!
+                  .color!
+                  .withOpacity(0.8)),
+          borderRadius: const BorderRadius.all(Radius.circular(12)),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
