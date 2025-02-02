@@ -11,7 +11,7 @@ class SunahView extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const CustomAppBar(header: 'السنن  الرواتب', desc: 'سنن الصلاة'),
+          const CustomAppBar(header: 'السنن  الرواتب', desc: 'النوافل'),
           const SunahTable(),
           const SpaceV(30),
           Padding(

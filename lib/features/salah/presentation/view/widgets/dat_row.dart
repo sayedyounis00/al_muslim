@@ -16,9 +16,11 @@ class DayRow extends StatelessWidget {
     String dayInAr =
         LangConverter().convertToArabic(int.parse(dayData.date.dayHnum));
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+      padding: const EdgeInsets.symmetric(horizontal: 0.0),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          const SpaceH(0),
           Column(
             children: [
               Text(dayInAr,
@@ -35,7 +37,7 @@ class DayRow extends StatelessWidget {
               ),
             ],
           ),
-          const Spacer(flex: 1),
+          const SpaceH(0),
           Column(
             children: [
               Text(dayData.date.dayName,
@@ -55,10 +57,9 @@ class DayRow extends StatelessWidget {
               ),
             ],
           ),
-          const Spacer(
-            flex: 2,
-          ),
+          const SpaceH(0),
           const IconBackk(),
+          const SpaceH(0),
         ],
       ),
     );
