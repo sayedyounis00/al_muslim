@@ -44,20 +44,22 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
           onReady: () {},
         ),
         builder: (_, player) {
-          return  
-          Column(
+          return Column(
             children: [
+              //! there is a proplem here if title not contain | it rethrow excetion
               CustomAppBar(
                 header: widget.podcastData.vidTitle.split('|').first,
-                desc: widget.podcastData.vidTitle.split('|')[1],
+                desc: widget.podcastData.vidTitle == " "
+                    ? ""
+                    : widget.podcastData.vidTitle.split('|')[1],
               ),
               const Spacer(),
               player,
               const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
-                  textAlign: TextAlign.right,
                   '',
+                  textAlign: TextAlign.right,
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w400,
@@ -142,7 +144,6 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
               const SpaceV(20),
             ],
           );
-      
         },
       ),
     );

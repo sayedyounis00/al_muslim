@@ -187,7 +187,7 @@ List<PodcastData> ehElmoshkilaVideos() => [
       ),
       PodcastData(
         vidUrl: 'https://www.youtube.com/watch?v=jdEbCO0Ibwo',
-        vidTitle: 'خطر الـ Social Media وضياع العمر',
+        vidTitle: 'إيه المشكلة |  في مواقع التواصل الاجتماعي ؟',
       ),
       PodcastData(
         vidUrl: 'https://www.youtube.com/watch?v=nnQ8qvpSPO8',
@@ -209,4 +209,288 @@ List<PodcastData> ehElmoshkilaVideos() => [
         vidUrl: 'https://www.youtube.com/watch?v=xBmwFnhx4I4',
         vidTitle: 'إيه المشكلة |  في الحجاب ولبس البنات؟',
       ),
+    ];
+
+//!this list is reversed  start from end to first podcast
+List<PodcastData> fahemVideos() => [
+      PodcastData(
+          vidTitle: "فاهم 59 | فلسفة الصوم | مع الشيخ/ أمجد سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=uTj3yNF79YI&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=1&t=2s&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 58 | فقه التعامل مع النعم | مع الشيخ/ هيثم سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=_85D3CqkoxA&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=2&t=5s&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 57 | سلسلة لازم تتحرر - (4) التحرر من العادة | مع الشيخ/ أمجد سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=-W6ijtUgXiU&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=3&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 56 | سلسلة لازم تتحرر - (3) التحرر من سلوك القطيع | مع الشيخ/ أمجد سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=f8croUJLd3Y&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=4&t=5s&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 55 | سلسلة لازم تتحرر - (2) التحرر من التفاهة | مع الشيخ/ أمجد سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=DdxrQV_bkkY&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=5&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 54 | سلسلة لازم تتحرر - (1) التحرر من الغفلة | مع الشيخ/ أمجد سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=agFMbV32JIc&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=6&t=257s&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 53 | أطفالنا والمساجد .. هل علمناهم الصلاة بحق؟ | مع د. شريف طه يونس",
+          vidUrl:
+              "https://www.youtube.com/watch?v=c6cJ9bbEQa0&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=7&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 52 | كيف تنقذ نفسك من إدمان الإباحية؟ | مع د. محمد عبد الجواد",
+          vidUrl:
+              "https://www.youtube.com/watch?v=NqCQkjgFMqQ&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=8&t=3s&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 51 | حياة المؤمن كبد أم حياة طيبة؟! | مع د. محمد علي يوسف",
+          vidUrl:
+              "https://www.youtube.com/watch?v=M-T4nHFCOQ4&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=9&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 50 | رحلة نجاح علمي وعملي قبل الثلاثين | مع م. أحمد ابو الفتوح",
+          vidUrl:
+              "https://www.youtube.com/watch?v=2faCQ0oQCG4&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=10&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 49 | مفهوم المؤازرة من سورة الفتح | مع د. حازم شومان",
+          vidUrl:
+              "https://www.youtube.com/watch?v=AxNR_TYgYhY&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=11&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 48 | مفاتيح النجاح والفاعلية من السنة | مع د. محمد جودة",
+          vidUrl:
+              "https://www.youtube.com/watch?v=wGP_yJyMSc8&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=12&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 47 | أثر خلافات الدعاة على الشباب | مع عاصم عرفة",
+          vidUrl:
+              "https://www.youtube.com/watch?v=sFulbhrbTMo&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=13&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 46 | أسماء الله الحسنى .. لماذا نتعلمها؟ | مع د. أمين الأنصاري",
+          vidUrl:
+              "https://www.youtube.com/watch?v=RvZLqmV9_SI&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=14&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 45 | التعليم المنزلي والتعليم الموازي |  د. محمد كحيل",
+          vidUrl:
+              "https://www.youtube.com/watch?v=aaU6rLXM_Zc&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=15&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 44 | المهاجر إلى الله - إبراهيم عليه السلام نموذجا | مع د. أمين الأنصاري",
+          vidUrl:
+              "https://www.youtube.com/watch?v=zaA_bsanOWw&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=16&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 43 | الهروب من الفهم | مع د. شريف طه يونس",
+          vidUrl:
+              "https://www.youtube.com/watch?v=4PxGvkgc1VE&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=17&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 42 | سلسلة تذوق العبادات - (4) الذكر | مع د. أحمد العربي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=nkil1U1GxdA&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=18&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 41 | مناسك الحج والعمرة - جولة فقهية ونصائح عملية | مع الشيخ/ أحمد عبد السلام",
+          vidUrl:
+              "https://www.youtube.com/watch?v=JXSPmyK0P4k&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=19&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 40 | بنو  إسـ رائـ يل  في القرآن  -  الجزء 2 | مع د. محمد علي يوسف",
+          vidUrl:
+              "https://www.youtube.com/watch?v=UlPXHAfpZmw&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=20&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 39 | بنو  إسـ رائـ يل  في القرآن  -  الجزء 1 | مع د. محمد علي يوسف",
+          vidUrl:
+              "https://www.youtube.com/watch?v=lYB4LpKrS-8&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=21&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 38 | سلسلة تذوق العبادات - (3) الدعاء | مع د. أحمد العربي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=si994Z9BAr8&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=22&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 37 | سلسلة تذوق العبادات - (2) القرآن | مع د. أحمد العربي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=hK-9Be0prrA&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=23&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 36 | سلسلة تذوق العبادات - (1) الصلاة | مع د. أحمد العربي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=63_AOCldyXo&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=24&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 35 | إدارة الشهوات | مع الشيخ/ هيثم سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=Yk7vVgsj3qY&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=25&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 34 | أسرار وأدوار حول معنى الرجولة الحقيقي! | مع أ. أحمد سالم",
+          vidUrl:
+              "https://www.youtube.com/watch?v=TSXTX1rSMhI&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=26&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 33 | كيف يفكر الناجحون ؟ | مع أ. أحمد خليفة",
+          vidUrl:
+              "https://www.youtube.com/watch?v=ipzPYAjD2Dc&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=27&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 32 | الذكاء العاطفي | مع أ. محمد الشافعي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=zJojvEaig_U&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=28&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 31 | من أنت؟ .. وما هويتك؟ | مع/ علي محمد علي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=15VyHZzSfD8&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=29&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 30 | ماذا لو رأى الصحابة أحداث غزة؟ - سلسلة فلسطين 3 | مع د. أحمد العربي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=3gX4kZkcNf0&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=30&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 29 | هل يبتلينا الله بما لا نطيق؟ - سلسلة فلسطين 2 | مع د. أحمد يحيى الشيخ",
+          vidUrl:
+              "https://www.youtube.com/watch?v=c19KLhQXJvo&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=31&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 28 | فلسطين .. من قلب المحنة تأتي المنحة - سلسلة فلسطين 1 | مع د. محمد علي يوسف",
+          vidUrl:
+              "https://www.youtube.com/watch?v=Ezr6uU2Z3ao&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=32&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 27 | هل في بيتك مدمن ؟ جذور الإدمان وعلاماته وعلاجه | مع د. أحمد عبد الفضيل",
+          vidUrl:
+              "https://www.youtube.com/watch?v=_x0axYjW6rw&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=33&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 26 | الحياة الزوجية الناجحة | مع الشيخ/ هيثم سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=ogf0i9CtaAk&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=34&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 25 | القرآن .. فهم وتدبر أم حفظ وتلاوة ؟ | مع الشيخ/ محمد مصطفى عبد المجيد",
+          vidUrl:
+              "https://www.youtube.com/watch?v=b8O3yLCbwTg&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=35&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 24 | التوبة | مع الشيخ/ هيثم سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=bGW1NecvGGc&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=36&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 23 | المعاملات البنكية في ميزان الشرع | مع الشيخ/ أحمد عبد السلام",
+          vidUrl:
+              "https://www.youtube.com/watch?v=6KmHW4ay8wk&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=37&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 22 | كيف ولماذا نتعلم؟ | مع د. رمزي عبد العزيز",
+          vidUrl:
+              "https://www.youtube.com/watch?v=elhbm1m7uSo&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=38&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 21 | تكوين نفس الإنسان ومصدر مشاعره | مع د. أيمن الحسيني",
+          vidUrl:
+              "https://www.youtube.com/watch?v=5F6sCVhg0uc&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=39&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 20 | فلسفة المعاملات المالية في الإسلام | مع الشيخ/ أحمد سيد",
+          vidUrl:
+              "https://www.youtube.com/watch?v=rhTSorIN06Q&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=40&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 19  | الطب النفسي بين الحقيقة والخرافات | مع د. أيمن الحسيني",
+          vidUrl:
+              "https://www.youtube.com/watch?v=eWmkJFA3R20&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=41&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 18 | فخاخ عقلية تدمر حياتنا | مع أ. أحمد الكودي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=yiDqY3YB9RU&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=42&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 17 | الذكاء الاصطناعي فرص ومخاطر | مع محمد أبو سريع و أحمد فتحي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=JpFIbLdjxl0&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=43&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 16 | أخلاقيات العمل | مع د. محمد حسام خضر",
+          vidUrl:
+              "https://www.youtube.com/watch?v=IesOE8Rkzik&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=44&pp=iAQB"),
+      PodcastData(
+          vidTitle: "ملخص الموسم الأول | فاهم بودكاست",
+          vidUrl:
+              "https://www.youtube.com/watch?v=oNTGm87vlcQ&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=45&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 15 | رمضان مدرسة الثلاثين يوما | مع الشيخ/ هيثم سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=YgRsl5ZfK7A&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=46&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 14 | التمويل في النظام المالي الإسلامي | مع د. باسم عليوة",
+          vidUrl:
+              "https://www.youtube.com/watch?v=qzT54FKba8o&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=47&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 13 | عشاق الروايات .. كيف تكتب رواية مفيدة | مع أ. أحمد المنزلاوي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=hit03Utg1B4&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=48&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 12 | كيف نقرأ التاريخ الإسلامي؟ | مع عماد الدين علي -  تاريخستان",
+          vidUrl:
+              "https://www.youtube.com/watch?v=Wh3BmP1CenM&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=49&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 11 | الدعاء | مع الشيخ/ هيثم سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=hzoAYs0AqNw&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=50&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 10 | الدعوة مسئولية كل مسلم .. اعرف دورك | مع د. محمد الغليظ",
+          vidUrl:
+              "https://www.youtube.com/watch?v=oXEV9bwzVXo&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=51&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 9 | مقارنة الأديان والدعوة للإسلام | مع محمد شاهين التاعب",
+          vidUrl:
+              "https://www.youtube.com/watch?v=Tc7YvF0py6E&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=52&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 8 | كيف ندرس الفقه | مع الشيخ/ هيثم سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=ku3TjlhYwXU&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=53&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 7 | الاكتـ.ـئـاب - الأمراض النفسية - الانتـ.ـحار | مع د. أحمد المصري",
+          vidUrl:
+              "https://www.youtube.com/watch?v=XyQs_I2vu0Y&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=54&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 6 | الدين بفهم من؟ .. وما موقفك من خلاف العلماء؟ | مع الشيخ/ هيثم سمير",
+          vidUrl:
+              "https://www.youtube.com/watch?v=bj-IuJNJIuM&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=55&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 5 | قصتي مع حفظ القرآن الكريم | مع د. سعيد أبو العلا حمزة",
+          vidUrl:
+              "https://www.youtube.com/watch?v=q8EYrvWn4n0&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=56&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 4 | تحديات التاجر المسلم | مع أ. خالد الشافعي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=JCDyUEGxwYU&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=57&pp=iAQB"),
+      PodcastData(
+          vidTitle: "فاهم 3 | عقلية المربي | مع أ. أحمد الكودي",
+          vidUrl:
+              "https://www.youtube.com/watch?v=bKXEqJnixRI&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=58&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 2 | الحياة الزوجية الناجحة | مع الشيخ/ هيثم سمير - الجزء الثاني",
+          vidUrl:
+              "https://www.youtube.com/watch?v=E8hLMbmArRk&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=59&pp=iAQB"),
+      PodcastData(
+          vidTitle:
+              "فاهم 1 | الحياة الزوجية الناجحة | مع الشيخ/ هيثم سمير - الجزء الأول",
+          vidUrl:
+              "https://www.youtube.com/watch?v=Xx9YesuaNiU&list=PLSFJcWy6euuCVCCDoku7xlV3BbzujmZQx&index=60&pp=iAQB")
     ];

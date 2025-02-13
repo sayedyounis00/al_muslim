@@ -16,8 +16,8 @@ class LastReadCard extends StatelessWidget {
     // SharedPreferences pref = await SharedPreferences.getInstance();
     int? suraNum = pref.getInt('last_sura_num');
     int? ayaNum = pref.getInt('last_aya_num');
-    if (suraNum != null && ayaNum != null) {
-      return {suraNum: ayaNum};
+    if (ayaNum != null) {
+      return {suraNum!: ayaNum};
     } else {
       return null;
     }

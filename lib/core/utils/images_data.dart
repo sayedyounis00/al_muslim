@@ -34,4 +34,5 @@ class ImageData {
 // ==================podcast=====================
   static String podcastWae = 'assets/images/wae.jpg';
   static String podcastEhLmoshkla = 'assets/images/moshcila.jpg';
+  static String podcastFahem = 'assets/images/fahem.jpg';
 }

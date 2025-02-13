@@ -5,7 +5,7 @@ import 'package:al_muslim/features/podcast/data/podcasts_links.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'podcast_episons_screen.dart';
-import 'widgets/home_main_item.dart';
+import 'widgets/podcast_main_item.dart';
 
 class AllPodcastsScreen extends StatelessWidget {
   const AllPodcastsScreen({super.key});
@@ -15,6 +15,7 @@ class AllPodcastsScreen extends StatelessWidget {
     Map<String, List<PodcastData>> podcasts = {
       ImageData.podcastEhLmoshkla: ehElmoshkilaVideos(),
       ImageData.podcastWae: wa3iVideos(),
+      ImageData.podcastFahem: fahemVideos(),
     };
 
     return Scaffold(

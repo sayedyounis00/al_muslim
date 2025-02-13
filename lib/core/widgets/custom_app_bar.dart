@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String header;
-  final String desc;
+  final String? desc;
   final bool hasDownload;
   final IconData downloadIcon;
   final void Function()? downloadButt;
   const CustomAppBar({
     super.key,
     required this.header,
-    required this.desc,
+     this.desc,
     this.downloadButt,
     this.hasDownload = false,
     this.downloadIcon = Icons.download_for_offline_outlined,
@@ -68,7 +68,7 @@ class CustomAppBar extends StatelessWidget {
                 desc == ''
                     ? const SpaceV(0)
                     : Text(
-                        desc,
+                        desc??" ",
                         textAlign: TextAlign.center,
                         style: Theme.of(context)
                             .textTheme

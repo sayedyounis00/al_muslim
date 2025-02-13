@@ -17,10 +17,15 @@ class PodcastEpisonsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> podcastNames = [
+      "إيه المشكلة",
+      "وعي",
+      "فاهم",
+    ];
     return Scaffold(
       body: Column(
         children: [
-          CustomAppBar(header: index == 0 ? 'إيه المشكلة!' : 'وعي', desc: ''),
+          CustomAppBar(header: podcastNames[index], desc: ''),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
