@@ -59,7 +59,7 @@ class QuranView extends StatelessWidget {
                 ),
               );
             },
-          )
+          ),
         ],
       ),
     );

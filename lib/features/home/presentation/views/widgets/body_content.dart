@@ -3,7 +3,6 @@ import 'package:al_muslim/features/home/presentation/views/widgets/features%20ca
 import 'package:al_muslim/features/home/presentation/views/widgets/features%20cards/last_read_card.dart';
 import 'package:al_muslim/features/home/presentation/views/widgets/features%20cards/quran_card.dart';
 import 'package:al_muslim/features/home/presentation/views/widgets/features%20cards/random_card.dart';
-import 'package:al_muslim/features/home/presentation/views/widgets/features%20cards/routine_track_card.dart';
 import 'package:flutter/material.dart';
 
 class BodyContent extends StatelessWidget {
@@ -22,7 +21,6 @@ class BodyContent extends StatelessWidget {
         SpaceV(3),
         FeaturesGridView(),
         SpaceV(3),
-        RoutineTrackCard(),
         RandomCard(),
         SpaceV(20),
       ],
